@@ -1,0 +1,9 @@
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.card img {
+    width: 50% !important;
+    margin-inline: auto;
+    border-radius: 50%;
+}

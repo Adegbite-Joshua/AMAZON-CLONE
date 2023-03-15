@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+</head>
+<body>
+    <form class="w-50 d-block mx-auto" id="productForm">
+        <input  class="form-control my-2"type="text" placeholder="Product Name" id="productName">
+        <input  class="form-control my-2"type="text" placeholder="Product Description" id="productDescription">
+        <input  class="form-control my-2"type="text" placeholder="Product Information" id="productInformation">
+        <input  class="form-control my-2"type="number" placeholder="Amount Available" id="amountAvailable">
+        <select class="form-control my-2" name="" id="productCategory">
+            <option value="computers">Computers</option>
+            <option value="boysFashion">Boys' Fashion</option>
+            <option value="electronics">Electronics</option>
+            <option value="girlsFashion">Girls' Fashion</option>
+            <option value="mensFashion">Men's Fashion</option>
+        </select>
+        <button type="button" class="btn btn-success" onclick="addProduct()">Add</button>
+
+    </form>
+
+    <script src="admin.js"></script>
+</body>
+</html>

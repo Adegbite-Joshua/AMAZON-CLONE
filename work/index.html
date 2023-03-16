@@ -13,22 +13,21 @@
         <a href="" class="h-100 d-inline">
             <img src="../logo.jpeg" alt="" class="h-100 d-inline" style="width: 200px;" >
         </a>
-        <div style="width: 250px;" class="d-inline">
+        <div style="width: 250px;" class="d-inline my-3">
             <p class="d-inline p-0 m-0">Deliver to <br> Nigeria</p>
         </div>
-        <div class="input-group my-4" style="width: 400px;">
-            <select name="" id="" class="form-select" style="width: 100px !important;">
-                <option value="" selected style="width: 100px !important;"> All</option>
+        <div class="row my-4" style="width: 400px;">
+            <select name="" id="" class="col-3" style="width: 100px !important;">
+                <option value="" selected> All</option>
                 <option value="">Nigeria</option>
                 <option value="">USA</option>
                 <option value="">Uganda</option>
                 <option value="">Dubai</option>
             </select>
-            <input type="radio" 
-            class="form-control" aria-label="Text input with segmented dropdown button" placeholder="Search amazon">
-            <button type="button" class="btn btn-warning">Sea</button>
+            <input class="col-6 " aria-label="Text input with segmented dropdown button" placeholder="Search amazon">
+            <button type="button" class="col-3 btn btn-warning">Sea</button>
           </div>
-          <div class="tooltip1 my-4 mx-3 d-inline"><strong>EN</strong>
+          <!-- <div class="tooltip1 my-4 mx-3 d-inline"><strong>EN</strong>
             <div class="tooltiptext1 ps-4">
             <p>Change language</p>
             <input type="radio"> English EN
@@ -39,21 +38,45 @@
             <input type="radio" class="me-2">Lorem, ipsum. <br class="my-2">
             <input type="radio" class="me-2">Lorem, ipsum. <br class="my-2">
             </div>
-          </div>
+          </div> -->
+          <div class="dropdown  m-4">
+            <p href="javascript:void(0)" class="dropbtn">EN</p>
+            <div class="dropdown-content">
+                <p class="text-dark">Change language</p>
+                <input type="radio" class="mx-2" checked> <span class="text-dark">English EN</span>
+                <hr class="border border-dark">
+                <input type="radio" class="mx-2"><span class="text-dark">español - ES</span> <br class="my-2">
+                <input type="radio" class="mx-2"><span class="text-dark">العربية - AR</span> <br class="my-2">
+                <input type="radio" class="mx-2"><span class="text-dark">Deutsch - DE</span> <br class="my-2">
+                <input type="radio" class="mx-2"><span class="text-dark">עברית - HE</span> <br class="my-2">
+                <input type="radio" class="mx-2"><span class="text-dark">한국어 - KO</span> <br class="my-2">
+                <input type="radio" class="mx-2"><span class="text-dark">português - PT</span> <br class="my-2">
+                <input type="radio" class="mx-2"><span class="text-dark">中文 (简体) - ZH</span> <br class="my-2">
+                <!-- <input type="radio" class="mx-2"><span class="text-dark">한국어 - KO</span> <br class="my-2"> -->
+
+
+
+
+
+
+
+            </div>
+        </div>
           <div class="tooltip1 my-4 mx-3 d-inline">
-            <small>Hello, sign in</small>
-            <h4 class="smallHeaderTitle">Accounts & Lists</h4>
+            
             <div class="tooltiptext1 ps-4">
-            <p>Change language</p>
-            <input type="radio"> English EN
-            <hr>
-            <input type="radio" class="me-2">Lorem, ipsum. <br class="my-2">
-            <input type="radio" class="me-2">Lorem, ipsum. <br class="my-2">
-            <input type="radio" class="me-2">Lorem, ipsum. <br class="my-2">
-            <input type="radio" class="me-2">Lorem, ipsum. <br class="my-2">
-            <input type="radio" class="me-2">Lorem, ipsum. <br class="my-2">
+                <button class="btn btn-warning">Sign in</button>
             </div>
           </div>
+          <div class="dropdown  m-4">
+            <!-- <p href="javascript:void(0)" >EN</p> -->
+            <div class="dropbtn">
+            <small>Hello, sign in</small>
+            <h4 class="smallHeaderTitle">Accounts & Lists</h4> </div>
+            <div class="dropdown-content1">
+                <button></button>
+            </div>
+        </div>
           <div class="my-3">
               <small>Returns</small>
               <h4 class="smallHeaderTitle">& Orders</h4>
@@ -78,13 +101,6 @@
         </div>
         <div class="w-100">
             <div id="carouselExampleDark" class="carousel carousel-dark slide w-100">
-                <!-- <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                </div> -->
                 <div class="carousel-inner">
                   <div class="carousel-item active" data-bs-interval="2000">
                     <img src="../61DUO0NqyyL._SX3000_.jpg" class="d-block w-100" alt="...">
@@ -113,43 +129,10 @@
               </div>
         </div>
         <div id="displayProductDiv" class="w-100 bg-opacity-25 transparentDiv" style="min-height: 100vh; margin-top: -50vh; position: absolute; z-index: 9999;">
-            <!-- <div class="" style="column-gap: 1/-1;">Computers</div> -->
-            <!-- <div class="border border-2" style="height: 400px;">
-                <h3>Header</h3>
-                <img src="../61TD5JLGhIL._SX3000_.jpg" class="h-75 d-block mx-auto w-100" alt="">
-            </div>
-            <div class="border border-2" style="height: 400px;">
-                <h3>Header</h3>
-                <img src="../61TD5JLGhIL._SX3000_.jpg" class="h-75 d-block mx-auto w-100" alt="">
-            </div>
-            <div class="border border-2" style="height: 400px;">
-                <h3>Header</h3>
-                <img src="../61TD5JLGhIL._SX3000_.jpg" class="h-75 d-block mx-auto w-100" alt="">
-            </div>
-            <div class="border border-2" style="height: 400px;">
-                <h3>Header</h3>
-                <img src="../61TD5JLGhIL._SX3000_.jpg" class="h-75 d-block mx-auto w-100" alt="">
-            </div>
-            <div class="border border-2" style="height: 400px;">
-                <h3>Header</h3>
-                <img src="../61TD5JLGhIL._SX3000_.jpg" class="h-75 d-block mx-auto w-100" alt="">
-            </div>
-            <div class="border border-2" style="height: 400px;">
-                <h3>Header</h3>
-                <img src="../61TD5JLGhIL._SX3000_.jpg" class="h-75 d-block mx-auto w-100" alt="">
-            </div>
-            <div class="border border-2" style="height: 400px;">
-                <h3>Header</h3>
-                <img src="../61TD5JLGhIL._SX3000_.jpg" class="h-75 d-block mx-auto w-100" alt="">
-            </div>
-            <div class="border border-2" style="height: 400px;">
-                <h3>Header</h3>
-                <img src="../61TD5JLGhIL._SX3000_.jpg" class="h-75 d-block mx-auto w-100" alt="">
-            </div> -->
         </div>
         <br>
         <hr>
-        <div style="height: 40vh; margin-top: 400px; overflow-x: auto;" class="w-100 d-flex">
+        <div id="" style="height: 40vh; margin-top: 400px; overflow-x: auto;" class="w-100 d-flex scrollSide">
             <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
             <img src="../61jovjd+f9L._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
             <img src="../61Ly9zlsGxL._SX1500_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
@@ -176,7 +159,7 @@
             <img src="../61TD5JLGhIL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
             <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
         </div>
-        <div style="height: 40vh; overflow-x: auto;" class="w-100 d-flex mt-5">
+        <div style="height: 40vh; overflow-x: auto;" class="w-100 d-flex mt-5 scrollSide">
             <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
             <img src="../61jovjd+f9L._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
             <img src="../61Ly9zlsGxL._SX1500_.jpg" class="h-100 m-2" style="width: 100px;" alt="">

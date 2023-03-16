@@ -9,7 +9,9 @@ allAmazonProducts.map((category)=>{
                 <div class="border border-2" style="height: 400px;">
                     <h3>${product.productName}</h3>
                     <img src="../61TD5JLGhIL._SX3000_.jpg" class="h-75 d-block mx-auto w-100" alt="">
-                </div>                ` 
+                    <a href="" class="text-decoration-none text-success m-2">See more</a>
+                </div>                
+                ` 
             })
     }
 })

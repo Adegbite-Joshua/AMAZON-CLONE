@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./addToCart.css">
+</head>
+<body>
+    <div id="mainNav">
+        <a href="" class="h-100 d-inline p-3">
+            <img src="../logo.jpeg" alt="" class="d-inline whiteBorderHover" style="width: 160px; height: 90%;" >
+        </a>
+        <div style="width: 150px;" class="d-inline d-flex flex-row justify-content-center my-3 whiteBorderHover">
+            <div><i class="bi bi-search"></i></div>
+            <div>
+              <p class="d-inline p-0 m-0">Deliver to <br> Nigeria</p>
+            </div>
+        </div>
+        <div id="yellowBorderHover" class="d-flex my-4 rounded-3 overflow-hidden" style="width: 700px;">
+            <select name="" id="" class="flex10">
+                <option value="" selected> All</option>
+                <option value="">Nigeria</option>
+                <option value="">USA</option>
+                <option value="">Uganda</option>
+                <option value="">Dubai</option>
+            </select>
+            <input class="flex80" aria-label="Text input with segmented dropdown button" onfocus="focusYellowBorder()" placeholder="Search amazon">
+            <button type="button" class="flex10 btn btn-warning"><i class="bi bi-search"></i></button>
+          </div>
+          <div class="dropdown  m-4">
+            <p href="javascript:void(0)" class="dropbtn whiteBorderHover p-3">EN</p>
+            <div class="dropdown-content">
+                <p class="text-dark">Change language</p>
+                <input type="radio" class="mx-2" checked> <span class="text-dark">English EN</span>
+                <hr class="border border-dark">
+                <input type="radio" class="mx-2"><span class="text-dark">español - ES</span> <br class="my-2">
+                <input type="radio" class="mx-2"><span class="text-dark">العربية - AR</span> <br class="my-2">
+                <input type="radio" class="mx-2"><span class="text-dark">Deutsch - DE</span> <br class="my-2">
+                <input type="radio" class="mx-2"><span class="text-dark">עברית - HE</span> <br class="my-2">
+                <input type="radio" class="mx-2"><span class="text-dark">한국어 - KO</span> <br class="my-2">
+                <input type="radio" class="mx-2"><span class="text-dark">português - PT</span> <br class="my-2">
+                <input type="radio" class="mx-2"><span class="text-dark">中文 (简体) - ZH</span> <br class="my-2">
+            </div>
+        </div>
+          <div class="tooltip1 my-4 d-inline">
+            <div class="tooltiptext1 ps-4">
+                <button class="btn btn-warning">Sign in</button>
+            </div>
+          </div>
+          <div class="dropdown  m-4">
+            <div class="dropbtn  whiteBorderHover p-2">
+            <small>Hello, sign in</small>
+            <h4 class="smallHeaderTitle">Accounts & Lists</h4> </div>
+            <div class="dropdown-content1">
+                <div class="d-flex justify-content-center flex-column">
+                  <button class="btn btn-warning my-2 mx-auto d-inline-block">Sign in</button>
+                  <p class="text-center text-dark">New customer? <a href="" class="text-warning text-decoration-none">Start here.</a></p>
+                </div>
+                <hr class="m-0">
+                <div class="ms-3 mt-1 w-100 dropdownSignin d-flex">
+                  <div style="height: 200px;" class="border border-2 mainSide">
+                    <h4>Your Lists</h4>
+                    <ul>
+                      <li>Create a List</li>
+                      <li>Find a List or Registry</li>
+                    </ul>
+                  </div>
+                  <div style="height: 200px;" class="border border-2 vr innerSide"></div>
+                  <div style="height: 200px;" class="border border-2 mainSide">
+                      <h3>Your Account</h3>
+                      <ul>
+                        <li>Account</li>
+                        <li>Orders</li>
+                        <li>Recommendations</li>
+                        <li>Browsing History</li>
+                        <li>Watchlist</li>
+                        <li>Video Purchases & Rentals</li>
+                        <li>Kindle Unlimited</li>
+                        <li>Content & Devices</li>
+                        <li>Subscribe & Save Items</li>
+                        <li>Memberships & Subscriptions</li>
+                        <li>Music Library</li>
+                      </ul>
+                  </div>
+                </div>
+            </div>
+        </div>
+          <div class="my-3 mx-2 p-2 whiteBorderHover">
+              <small>Returns</small>
+              <h4 class="smallHeaderTitle">& Orders</h4>
+          </div>
+          <div class="my-3  whiteBorderHover">
+            <img src="../logo.jpeg" style="height: 50px; width: 50px; display: inline;" alt="">
+             <h4 class="d-inline smallHeaderTitle">Carts</h4>
+          </div>
+    </div>
+    <div class="bg-dark w-100 d-flex justify-content-between p-1">
+        <div>
+            <button class="btn btn-outline-light text-light">All</button>
+            <button class="btn btn-outline-light text-light">Today's Deals</button>
+            <button class="btn btn-outline-light text-light">Customer Service</button>
+            <button class="btn btn-outline-light text-light">Registry</button>
+            <button class="btn btn-outline-light text-light">Gift Cards</button>
+            <button class="btn btn-outline-light text-light me-auto">Sell</button>
+        </div>
+        <div>
+            <button class="btn btn-outline-light text-light me-4">Shop great deals now</button>
+        </div>
+    </div>
+    <div class="w-100 gridCart">
+        <div class="border border-2 d-flex justify-content-center">
+            <div class="d-flex justify-content-end align-items-center">
+                <img src="" id="productPicture" style="height: 200px; width: 200px;" alt="">
+            </div>
+            <div class="d-flex justify-content-center p-3 flex-column align-items-start">
+                <h5 class="fw-bold">🥇✅ Added to Cart</h5>
+                <p><strong>Style:</strong> Basic</p>
+            </div>
+        </div>
+        <div class="border border-2 p-3 d-flex flex-column justify-content-center align-items-center gap-2">
+            <h5><strong>Cart Subtotal:</strong> <sup>NGN</sup> 113,005 <sup>.44</sup></h5>
+            <button class="btn btn-warning w-100 rounded-pill my-1">Proceed to checkout (14 items)</button>
+            <button class="btn btn-white border border-1 border-dark bg-opacity-50 w-100 rounded-pill my-1" onclick="window.location.href = 'viewCart.html'">Go to Cart</button>
+            <p>For best experience <a href="">sign in to your account</a></p>
+        </div>
+    </div>
+    <div style="height: 400px; overflow: auto; position: relative;" class="w-100 mt-5">
+        <button class="buttonGrid1">Ba</button>
+        <button class="buttonGrid2">Ri</button>
+        <div id="gridList1" class="relatedGrid">
+
+        </div>
+    </div>
+    
+    <script src="./addToCart.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <div class="w-25 d-block mx-auto">
+        <img src="../logo.jpeg" style="height: 60px;" class="w-50 d-block mx-auto mt-2" alt="">
+        <div class="w-100 border border-2 rounded-3 my-2 p-4">
+            <h3>Sign in</h3>
+            <label for="loginInput">Email or mobile phone number</label>
+            <input type="text" class="form-control py-2" id="loginInput" placeholder="">
+            <button class="my-2 text-center btn btn-warning w-100" onclick="window.location.href='chooseAddress.html'">Continue</button>
+            <small>By continuing, you agree to Amazon's <a href="">Conditions of Use</a> and <a href="">Privacy Notice</a>.</small>
+            <p>Need help?
+                <div class="mt-1" style="display: none;">
+                    <p class="m-0">Forgot your password?</p>
+                    <p class="m-0">Other issues with Sign-In</p>
+                </div>
+            </p>
+        </div>
+        <div class="w-100 d-flex flex-row">
+            <hr style="flex-basis: 30%;">
+            <small style="flex-basis: 40%;" class="py-1 text-center">New to Amazon?</small>
+            <hr style="flex-basis: 30%;">
+        </div>
+        <button class="btn btn-light border border-1 w-100">Create your Amazon account</button>
+    </div>
+    <script src="./countries.js"></script>
+</body>
+</html>

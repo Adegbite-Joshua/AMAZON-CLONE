@@ -1,0 +1,13 @@
+.grid_Lists{
+    display: grid;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    padding: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+/* .inner{
+    background-image: url(../61DUO0NqyyL._SX3000_.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+} */

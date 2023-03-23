@@ -10,37 +10,29 @@
 </head>
 <body>
     <div id="mainNav">
-        <a href="" class="h-100 d-inline">
-            <img src="../logo.jpeg" alt="" class="h-100 d-inline" style="width: 200px;" >
+        <a href="" class="h-100 d-inline p-3">
+            <img src="../logo.jpeg" alt="" class="d-inline whiteBorderHover" style="width: 160px; height: 90%;" >
         </a>
-        <div style="width: 250px;" class="d-inline my-3">
-            <p class="d-inline p-0 m-0">Deliver to <br> Nigeria</p>
+        <div style="width: 150px;" class="d-inline d-flex flex-row justify-content-center my-3 whiteBorderHover">
+            <div>i</div>
+            <div>
+              <p class="d-inline p-0 m-0">Deliver to <br> Nigeria</p>
+            </div>
         </div>
-        <div class="row my-4" style="width: 400px;">
-            <select name="" id="" class="col-3" style="width: 100px !important;">
+        <div id="yellowBorderHover" class="d-flex my-4 rounded-3 overflow-hidden" style="width: 700px;">
+            <select name="" id="" class="flex10">
                 <option value="" selected> All</option>
                 <option value="">Nigeria</option>
                 <option value="">USA</option>
                 <option value="">Uganda</option>
                 <option value="">Dubai</option>
             </select>
-            <input class="col-6 " aria-label="Text input with segmented dropdown button" placeholder="Search amazon">
-            <button type="button" class="col-3 btn btn-warning">Sea</button>
+            <input class="flex80" aria-label="Text input with segmented dropdown button" onfocus="focusYellowBorder()" placeholder="Search amazon">
+            <button type="button" class="flex10 btn btn-warning">Sea</button>
           </div>
-          <!-- <div class="tooltip1 my-4 mx-3 d-inline"><strong>EN</strong>
-            <div class="tooltiptext1 ps-4">
-            <p>Change language</p>
-            <input type="radio"> English EN
-            <hr>
-            <input type="radio" class="me-2">Lorem, ipsum. <br class="my-2">
-            <input type="radio" class="me-2">Lorem, ipsum. <br class="my-2">
-            <input type="radio" class="me-2">Lorem, ipsum. <br class="my-2">
-            <input type="radio" class="me-2">Lorem, ipsum. <br class="my-2">
-            <input type="radio" class="me-2">Lorem, ipsum. <br class="my-2">
-            </div>
-          </div> -->
+          
           <div class="dropdown  m-4">
-            <p href="javascript:void(0)" class="dropbtn">EN</p>
+            <p href="javascript:void(0)" class="dropbtn whiteBorderHover p-3">EN</p>
             <div class="dropdown-content">
                 <p class="text-dark">Change language</p>
                 <input type="radio" class="mx-2" checked> <span class="text-dark">English EN</span>
@@ -52,53 +44,72 @@
                 <input type="radio" class="mx-2"><span class="text-dark">한국어 - KO</span> <br class="my-2">
                 <input type="radio" class="mx-2"><span class="text-dark">português - PT</span> <br class="my-2">
                 <input type="radio" class="mx-2"><span class="text-dark">中文 (简体) - ZH</span> <br class="my-2">
-                <!-- <input type="radio" class="mx-2"><span class="text-dark">한국어 - KO</span> <br class="my-2"> -->
-
-
-
-
-
-
-
             </div>
         </div>
-          <div class="tooltip1 my-4 mx-3 d-inline">
-            
+          <div class="tooltip1 my-4 d-inline">
             <div class="tooltiptext1 ps-4">
                 <button class="btn btn-warning">Sign in</button>
             </div>
           </div>
           <div class="dropdown  m-4">
-            <!-- <p href="javascript:void(0)" >EN</p> -->
-            <div class="dropbtn">
+            <div class="dropbtn  whiteBorderHover p-2">
             <small>Hello, sign in</small>
             <h4 class="smallHeaderTitle">Accounts & Lists</h4> </div>
             <div class="dropdown-content1">
-                <button></button>
+                <div class="d-flex justify-content-center flex-column">
+                  <button class="btn btn-warning my-2 mx-auto d-inline-block">Sign in</button>
+                  <p class="text-center text-dark">New customer? <a href="" class="text-warning text-decoration-none">Start here.</a></p>
+                </div>
+                <hr class="m-0">
+                <div class="ms-3 mt-1 w-100 dropdownSignin">
+                  <div style="" class="border border-0 border-end">
+                    <h4>Your Lists</h4>
+                    <ul>
+                      <li><a href="" style="color: black !important;"> Create a List</a></li>
+                      <li><a href="" style="color: black !important;"> Find a List or Registry</a></li>
+                    </ul>
+                  </div>
+                  <div style="">
+                      <h3>Your Account</h3>
+                      <ul>
+                        <li><a href="" style="color: black !important;"> Account</a></li>
+                        <li><a href="" style="color: black !important;"> Orders</a></li>
+                        <li><a href="" style="color: black !important;"> Recommendations</a></li>
+                        <li><a href="" style="color: black !important;"> Browsing History</a></li>
+                        <li><a href="" style="color: black !important;"> Watchlist</a></li>
+                        <li><a href="" style="color: black !important;"> Video Purchases & Rentals</a></li>
+                        <li><a href="" style="color: black !important;"> Kindle Unlimited</a></li>
+                        <li><a href="" style="color: black !important;"> Content & Devices</a></li>
+                        <li><a href="" style="color: black !important;"> Subscribe & Save Items</a></li>
+                        <li><a href="" style="color: black !important;"> Memberships & Subscriptions</a></li>
+                        <li><a href="" style="color: black !important;"> Music Library</a></li>
+                      </ul>
+                  </div>
+                </div>
             </div>
         </div>
-          <div class="my-3">
+          <div class="my-3 mx-2 p-2 whiteBorderHover">
               <small>Returns</small>
               <h4 class="smallHeaderTitle">& Orders</h4>
           </div>
-          <div class="my-3">
+          <div class="my-3  whiteBorderHover">
             <img src="../logo.jpeg" style="height: 50px; width: 50px; display: inline;" alt="">
              <h4 class="d-inline smallHeaderTitle">Carts</h4>
           </div>
+    </div>
+    <div class="bg-dark w-100 d-flex justify-content-between p-1">
+        <div>
+            <button class="btn btn-outline-light text-light">All</button>
+            <button class="btn btn-outline-light text-light">Today's Deals</button>
+            <button class="btn btn-outline-light text-light">Customer Service</button>
+            <button class="btn btn-outline-light text-light">Registry</button>
+            <button class="btn btn-outline-light text-light">Gift Cards</button>
+            <button class="btn btn-outline-light text-light me-auto">Sell</button>
         </div>
-        <div class="bg-dark w-100 d-flex justify-content-between p-2">
-            <div>
-                <button class="btn btn-outline-light text-light">All</button>
-                <button class="btn btn-outline-light text-light">Today's Deals</button>
-                <button class="btn btn-outline-light text-light">Customer Service</button>
-                <button class="btn btn-outline-light text-light">Registry</button>
-                <button class="btn btn-outline-light text-light">Gift Cards</button>
-                <button class="btn btn-outline-light text-light me-auto">Sell</button>
-            </div>
-            <div>
-                <button class="btn btn-outline-light text-light me-4">Shop great deals now</button>
-            </div>
+        <div>
+            <button class="btn btn-outline-light text-light me-4">Shop great deals now</button>
         </div>
+    </div>
         <div class="w-100">
             <div id="carouselExampleDark" class="carousel carousel-dark slide w-100">
                 <div class="carousel-inner">
@@ -132,59 +143,68 @@
         </div>
         <br>
         <hr>
-        <div id="" style="height: 40vh; margin-top: 400px; overflow-x: auto;" class="w-100 d-flex scrollSide">
-            <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../61jovjd+f9L._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../61Ly9zlsGxL._SX1500_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../61TD5JLGhIL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../61jovjd+f9L._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../61Ly9zlsGxL._SX1500_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../61TD5JLGhIL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../61jovjd+f9L._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../61Ly9zlsGxL._SX1500_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../61TD5JLGhIL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../61jovjd+f9L._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../61Ly9zlsGxL._SX1500_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../61TD5JLGhIL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../61jovjd+f9L._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../61Ly9zlsGxL._SX1500_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../61TD5JLGhIL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-        </div>
-        <div style="height: 40vh; overflow-x: auto;" class="w-100 d-flex mt-5 scrollSide">
-            <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../61jovjd+f9L._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../61Ly9zlsGxL._SX1500_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../61TD5JLGhIL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../61jovjd+f9L._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../61Ly9zlsGxL._SX1500_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../61TD5JLGhIL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../61jovjd+f9L._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../61Ly9zlsGxL._SX1500_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../61TD5JLGhIL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../61jovjd+f9L._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../61Ly9zlsGxL._SX1500_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../61TD5JLGhIL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../61jovjd+f9L._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../61Ly9zlsGxL._SX1500_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../61TD5JLGhIL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-            <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+        <div style="height: 40vh; margin-top: 400px; overflow: auto; position: relative;" class="w-100 gridList">
+            <button style="z-index: 99999999999999;" class="buttonLeft">Ba</button>
+            <button style="z-index: 99999999999999;" class="buttonRight">Ri</button>
+            <div id="gridList" class="d-flex scrollSide gridList1 h-100">
+              <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../61jovjd+f9L._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../61Ly9zlsGxL._SX1500_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../61TD5JLGhIL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../61jovjd+f9L._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../61Ly9zlsGxL._SX1500_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../61TD5JLGhIL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../61jovjd+f9L._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../61Ly9zlsGxL._SX1500_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../61TD5JLGhIL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../61jovjd+f9L._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../61Ly9zlsGxL._SX1500_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../61TD5JLGhIL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../61jovjd+f9L._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../61Ly9zlsGxL._SX1500_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../61TD5JLGhIL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+            </div>
+            </div>
+          </div>
+          <div style="height: 40vh; overflow: auto; position: relative;" class="w-100 mt-5 gridList1 gridList">
+            <button class="buttonLeft buttonLeft1">Ba</button>
+            <button class="buttonRight buttonRight1">Ri</button>
+            <div id="gridList1" class="d-flex scrollSide gridList1 h-100">
+              <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../61jovjd+f9L._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../61Ly9zlsGxL._SX1500_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../61TD5JLGhIL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../61jovjd+f9L._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../61Ly9zlsGxL._SX1500_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../61TD5JLGhIL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../61jovjd+f9L._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../61Ly9zlsGxL._SX1500_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../61TD5JLGhIL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../61jovjd+f9L._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../61Ly9zlsGxL._SX1500_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../61TD5JLGhIL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../61jovjd+f9L._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../61Ly9zlsGxL._SX1500_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../61TD5JLGhIL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+            </div>
         </div>
 
     <div style="height: 50vh;" class="w-100 displayGrid">

@@ -6,13 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/animate.css/animate.css">
+    <link rel="stylesheet" href="./admin.css">
 </head>
-<body>
-    <form class="w-50 d-block mx-auto" id="productForm">
-        <input  class="form-control my-2"type="text" placeholder="Product Name" id="productName">
-        <input  class="form-control my-2"type="text" placeholder="Product Description" id="productDescription">
-        <input  class="form-control my-2"type="text" placeholder="Product Information" id="productInformation">
-        <input  class="form-control my-2"type="number" placeholder="Amount Available" id="amountAvailable">
+<body class="row py-5">
+    <form class="col-6 ms-auto" id="productForm">
+        <input  class="form-control my-2" type="text" placeholder="Product Name" id="productName">
+        <input  class="form-control my-2" type="text" placeholder="Product Description" id="productDescription">
+        <input  class="form-control my-2" type="text" placeholder="Product Information" id="productInformation">
+        <input  class="form-control my-2" type="number" placeholder="Amount Available" id="amountAvailable">
+        <input  class="form-control my-2" type="number" placeholder="Initial Price" id="initialPrice">
+        <input  class="form-control my-2" type="number" placeholder="Current Price" id="currentPrice">
+        <input  class="form-control my-2" type="text" placeholder="Brand" id="productBrand">
+        <input  class="form-control my-2" type="text" placeholder="Color" id="productColor">
+        <input  class="form-control my-2" type="text" placeholder="Compatible Devices" id="compatibleDevices">
+        <input  class="form-control my-2" type="text" placeholder="Compatible Phone" id="compatiblePhone">
+        <input  class="form-control my-2" type="text" placeholder="Models" id="productModels">
+        <input  class="form-control my-2" type="text" placeholder="Material" id="productMaterial">     
+        <input type="file" accept=".jpeg, .jpg, .png" class="form-control my-2" id="productFile">
         <select class="form-control my-2" name="" id="productCategory">
             <option value="computers">Computers</option>
             <option value="boysFashion">Boys' Fashion</option>
@@ -20,9 +31,14 @@
             <option value="girlsFashion">Girls' Fashion</option>
             <option value="mensFashion">Men's Fashion</option>
         </select>
-        <button type="button" class="btn btn-success" onclick="addProduct()">Add</button>
+        <button type="button" class="btn btn-success w-100" onclick="addProduct()">Add</button>
 
     </form>
+    <div class="col-3 me-auto">
+        <div id="productPicture" class="w-100" style="height: 50vh; background-color: red;">
+            <h3 class="text-center animate__animated animate__wobble text-white">Product Image</h3>
+        </div>
+    </div>
 
     <script src="admin.js"></script>
 </body>

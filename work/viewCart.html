@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./viewCart.css">
+</head>
+
+<body>
+  <div id="mainNav">
+    <a href="" class="h-100 d-inline p-3">
+      <img src="../logo.jpeg" alt="" class="d-inline whiteBorderHover" style="width: 160px; height: 90%;">
+    </a>
+    <div style="width: 150px;" class="d-inline d-flex flex-row justify-content-center my-3 whiteBorderHover">
+      <div><i class="bi bi-search"></i></div>
+      <div>
+        <p class="d-inline p-0 m-0">Deliver to <br> Nigeria</p>
+      </div>
+    </div>
+    <div id="yellowBorderHover" class="d-flex my-4 rounded-3 overflow-hidden" style="width: 700px;">
+      <select name="" id="" class="flex10">
+        <option value="" selected> All</option>
+        <option value="">Nigeria</option>
+        <option value="">USA</option>
+        <option value="">Uganda</option>
+        <option value="">Dubai</option>
+      </select>
+      <input class="flex80" aria-label="Text input with segmented dropdown button" onfocus="focusYellowBorder()"
+        placeholder="Search amazon">
+      <button type="button" class="flex10 btn btn-warning"><i class="bi bi-search"></i></button>
+    </div>
+    <div class="dropdown  m-4">
+      <p href="javascript:void(0)" class="dropbtn whiteBorderHover p-3">EN</p>
+      <div class="dropdown-content">
+        <p class="text-dark">Change language</p>
+        <input type="radio" class="mx-2" checked> <span class="text-dark">English EN</span>
+        <hr class="border border-dark">
+        <input type="radio" class="mx-2"><span class="text-dark">español - ES</span> <br class="my-2">
+        <input type="radio" class="mx-2"><span class="text-dark">العربية - AR</span> <br class="my-2">
+        <input type="radio" class="mx-2"><span class="text-dark">Deutsch - DE</span> <br class="my-2">
+        <input type="radio" class="mx-2"><span class="text-dark">עברית - HE</span> <br class="my-2">
+        <input type="radio" class="mx-2"><span class="text-dark">한국어 - KO</span> <br class="my-2">
+        <input type="radio" class="mx-2"><span class="text-dark">português - PT</span> <br class="my-2">
+        <input type="radio" class="mx-2"><span class="text-dark">中文 (简体) - ZH</span> <br class="my-2">
+      </div>
+    </div>
+    <div class="tooltip1 my-4 d-inline">
+      <div class="tooltiptext1 ps-4">
+        <button class="btn btn-warning">Sign in</button>
+      </div>
+    </div>
+    <div class="dropdown  m-4">
+      <div class="dropbtn  whiteBorderHover p-2">
+        <small>Hello, sign in</small>
+        <h4 class="smallHeaderTitle">Accounts & Lists</h4>
+      </div>
+      <div class="dropdown-content1">
+        <div class="d-flex justify-content-center flex-column">
+          <button class="btn btn-warning my-2 mx-auto d-inline-block">Sign in</button>
+          <p class="text-center text-dark">New customer? <a href="" class="text-warning text-decoration-none">Start
+              here.</a></p>
+        </div>
+        <hr class="m-0">
+        <div class="ms-3 mt-1 w-100 dropdownSignin d-flex">
+          <div style="height: 200px;" class="border border-2 mainSide">
+            <h4>Your Lists</h4>
+            <ul>
+              <li>Create a List</li>
+              <li>Find a List or Registry</li>
+            </ul>
+          </div>
+          <div style="height: 200px;" class="border border-2 vr innerSide"></div>
+          <div style="height: 200px;" class="border border-2 mainSide">
+            <h3>Your Account</h3>
+            <ul>
+              <li>Account</li>
+              <li>Orders</li>
+              <li>Recommendations</li>
+              <li>Browsing History</li>
+              <li>Watchlist</li>
+              <li>Video Purchases & Rentals</li>
+              <li>Kindle Unlimited</li>
+              <li>Content & Devices</li>
+              <li>Subscribe & Save Items</li>
+              <li>Memberships & Subscriptions</li>
+              <li>Music Library</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="my-3 mx-2 p-2 whiteBorderHover">
+      <small>Returns</small>
+      <h4 class="smallHeaderTitle">& Orders</h4>
+    </div>
+    <div class="my-3  whiteBorderHover">
+      <img src="../logo.jpeg" style="height: 50px; width: 50px; display: inline;" alt="">
+      <h4 class="d-inline smallHeaderTitle">Carts</h4>
+    </div>
+  </div>
+  <div class="bg-dark w-100 d-flex justify-content-between p-1">
+    <div>
+      <button class="btn btn-outline-light text-light">All</button>
+      <button class="btn btn-outline-light text-light">Today's Deals</button>
+      <button class="btn btn-outline-light text-light">Customer Service</button>
+      <button class="btn btn-outline-light text-light">Registry</button>
+      <button class="btn btn-outline-light text-light">Gift Cards</button>
+      <button class="btn btn-outline-light text-light me-auto">Sell</button>
+    </div>
+    <div>
+      <button class="btn btn-outline-light text-light me-4">Shop great deals now</button>
+    </div>
+  </div>
+  <div style="height: 100px;" class="w-100 d-flex cartGRid gap-2 p-2">
+    <div style="flex-basis: 70%;">
+      <h3>Shopping Cart</h3>
+      <small class="d-block text-end">Price</small>
+      <hr>
+      <div id="displayCart" class="w-100">
+
+      </div>
+      <p class="text-end">Subtotal (<span class="itemNumber"></span> ): <span class="fw-bold allProductPrice">$30.42</span></p>
+    </div>
+    <div style="flex-basis: 30%;" class="p-2">
+      <div class="w-100 p-2" style="height: 300px;">
+        <p style="font-size: 13px;">✅<span class="text-success">Your order qualifies for FREE Shipping</span>. Choose
+          this option at checkout. <a href="">See details</a></p>
+        <p class="pt-5">Subtotal (<span class="itemNumber"></span> ):<span class="fw-bold allProductPrice">$30.42</span></p>
+        <input type="checkbox" name="" id="" class="mt-1">
+        <p class="d-inline ms-2 mt-1">This order contains a gift</p>
+        <button class="btn btn-warning w-75 rounded-pill my-1" onclick="window.location.href = 'signIn.html'">Proceed to checkout</button>
+      </div>
+      <div class="w-100 p-2 pt-0" style="height: auto;">
+        <h5>Customers who bought items in your cart also bought</h5>
+        <div class="d-flex w-100 mb-2" style="height: 300px;">
+          <img src="../Fuji_Quad_Mouse_1x._SY116_CB667159063_.jpg" class="w-50 h-100" alt="">
+          <div class="h-100 w-50">
+            <a href="">Bedtime Originals Twinkle Toes Pink...</a>
+            <p>Stars 6789</p>
+            <p class="text-danger">$123</p>
+            <button class="btn btn-warning w-75 rounded-pill my-1">Add to Cart</button>
+          </div>
+        </div>
+        <div class="d-flex w-100 mb-2" style="height: 300px;">
+          <img src="../Fuji_Quad_Mouse_1x._SY116_CB667159063_.jpg" class="w-50 h-100" alt="">
+          <div class="h-100 w-50">
+            <a href="">Bedtime Originals Twinkle Toes Pink...</a>
+            <p>Stars 6789</p>
+            <p class="text-danger">$123</p>
+            <button class="btn btn-warning w-75 rounded-pill my-1">Add to Cart</button>
+          </div>
+        </div>
+        <div class="d-flex w-100 mb-2" style="height: 300px;">
+          <img src="../Fuji_Quad_Mouse_1x._SY116_CB667159063_.jpg" class="w-50 h-100" alt="">
+          <div class="h-100 w-50">
+            <a href="">Bedtime Originals Twinkle Toes Pink...</a>
+            <p>Stars 6789</p>
+            <p class="text-danger">$123</p>
+            <button class="btn btn-warning w-75 rounded-pill my-1">Add to Cart</button>
+          </div>
+        </div>
+        <div class="d-flex w-100 mb-2" style="height: 300px;">
+          <img src="../Fuji_Quad_Mouse_1x._SY116_CB667159063_.jpg" class="w-50 h-100" alt="">
+          <div class="h-100 w-50">
+            <a href="">Bedtime Originals Twinkle Toes Pink...</a>
+            <p>Stars 6789</p>
+            <p class="text-danger">$123</p>
+            <button class="btn btn-warning w-75 rounded-pill my-1">Add to Cart</button>
+          </div>
+        </div>
+        <div class="d-flex w-100 mb-2" style="height: 300px;">
+          <img src="../Fuji_Quad_Mouse_1x._SY116_CB667159063_.jpg" class="w-50 h-100" alt="">
+          <div class="h-100 w-50">
+            <a href="">Bedtime Originals Twinkle Toes Pink...</a>
+            <p>Stars 6789</p>
+            <p class="text-danger">$123</p>
+            <button class="btn btn-warning w-75 rounded-pill my-1">Add to Cart</button>
+          </div>
+        </div>
+        <div class="d-flex w-100 mb-2" style="height: 300px;">
+          <img src="../Fuji_Quad_Mouse_1x._SY116_CB667159063_.jpg" class="w-50 h-100" alt="">
+          <div class="h-100 w-50">
+            <a href="">Bedtime Originals Twinkle Toes Pink...</a>
+            <p>Stars 6789</p>
+            <p class="text-danger">$123</p>
+            <button class="btn btn-warning w-75 rounded-pill my-1">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="./viewCart.js"></script>
+</body>
+
+</html>

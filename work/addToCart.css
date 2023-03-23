@@ -1,0 +1,32 @@
+.gridCart{
+    display: grid;
+    height: 200px;
+    column-gap: 1rem;
+    padding: 1rem;
+    grid-template-columns: 5fr 2fr;
+}
+.relatedGrid{
+    display: flex;
+    height: 400px;
+    flex-direction: row;
+    padding: 1rem;
+    position: relative;
+    gap: 1rem;
+}
+.buttonGrid1,
+.buttonGrid2 {
+    position: absolute;
+    top: 30%;
+    bottom: 30%;
+    /* right: 100vw !important; */
+    border: red 2px solid;
+    z-index: 999;
+}
+.buttonGrid1{
+    left: 0;
+    right: 100;
+}
+.buttonGrid2{
+    right: 0;
+    left: 100;
+}

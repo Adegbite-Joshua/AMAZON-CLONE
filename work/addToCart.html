@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="./addToCart.css">
+    <link rel="stylesheet" href="../fontawesome-free-6.4.0-web/css/all.css">
 </head>
 <body>
     <div id="mainNav">
@@ -118,21 +119,21 @@
             </div>
             <div class="d-flex justify-content-center p-3 flex-column align-items-start">
                 <h5 class="fw-bold">🥇✅ Added to Cart</h5>
-                <p><strong>Style:</strong> Basic</p>
+                <p class="d-none d-md-block"><strong>Style:</strong> Basic</p>
+                <button class="btn btn-light d-md-none" onclick="window.location.href = 'viewCart.html'">Go to Cart</button>
             </div>
         </div>
-        <div class="border border-2 p-3 d-flex flex-column justify-content-center align-items-center gap-2">
-            <h5><strong>Cart Subtotal:</strong> <sup>NGN</sup> 113,005 <sup>.44</sup></h5>
-            <button class="btn btn-warning w-100 rounded-pill my-1">Proceed to checkout (14 items)</button>
+        <div class="d-none d-md-flex border border-2 p-3 flex-column justify-content-center align-items-center gap-2">
+            <h5><strong>Cart Subtotal:</strong> <sup>NGN</sup><span id="allProductPrice"></span><sup>.00</sup></h5>
+            <button class="btn btn-warning w-100 rounded-pill my-1" onclick="window.location.href = 'signIn.html'">Proceed to checkout (<span id="totalProductNumber"></span>)</button>
             <button class="btn btn-white border border-1 border-dark bg-opacity-50 w-100 rounded-pill my-1" onclick="window.location.href = 'viewCart.html'">Go to Cart</button>
             <p>For best experience <a href="">sign in to your account</a></p>
         </div>
     </div>
     <div style="height: 400px; overflow: auto; position: relative;" class="w-100 mt-5">
-        <button class="buttonGrid1">Ba</button>
-        <button class="buttonGrid2">Ri</button>
+        <button class="buttonGrid1" style="font-size: 30px;">&#10094;</button>
+        <button class="buttonGrid2" style="font-size: 30px;">&#10095;</button>
         <div id="gridList1" class="relatedGrid">
-
         </div>
     </div>
     

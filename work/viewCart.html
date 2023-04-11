@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="./viewCart.css">
 </head>
 
-<body>
+<body class="position-relative">
   <div id="mainNav">
     <a href="" class="h-100 d-inline p-3">
       <img src="../logo.jpeg" alt="" class="d-inline whiteBorderHover" style="width: 160px; height: 90%;">
@@ -116,17 +116,23 @@
       <button class="btn btn-outline-light text-light me-4">Shop great deals now</button>
     </div>
   </div>
+  <div class="d-md-none px-3">
+    <h4 class="d-inline">Subtotal <sup>#</sup><h2 class="d-inline allProductPrice"></h2><sup>00</sup></h4>
+    <button class="w-100 btn btn-warning">Proceed to checkout (<span class="itemNumber"></span>)</button>
+    <input type="checkbox" name="" id="" class="mt-1">
+    <p class="d-inline ms-2 mt-1">This order contains a gift</p>
+  </div>
   <div style="height: 100px;" class="w-100 d-flex cartGRid gap-2 p-2">
-    <div style="flex-basis: 70%;">
+    <div style="flex-basis: 70%;" class="smallFlex">
       <h3>Shopping Cart</h3>
-      <small class="d-block text-end">Price</small>
+      <small class="d-none d-md-block text-end">Price</small>
       <hr>
       <div id="displayCart" class="w-100">
 
       </div>
       <p class="text-end">Subtotal (<span class="itemNumber"></span> ): <span class="fw-bold allProductPrice">$30.42</span></p>
     </div>
-    <div style="flex-basis: 30%;" class="p-2">
+    <div style="flex-basis: 30%;" class="p-2 d-none d-md-inline-block">
       <div class="w-100 p-2" style="height: 300px;">
         <p style="font-size: 13px;">✅<span class="text-success">Your order qualifies for FREE Shipping</span>. Choose
           this option at checkout. <a href="">See details</a></p>
@@ -137,59 +143,7 @@
       </div>
       <div class="w-100 p-2 pt-0" style="height: auto;">
         <h5>Customers who bought items in your cart also bought</h5>
-        <div class="d-flex w-100 mb-2" style="height: 300px;">
-          <img src="../Fuji_Quad_Mouse_1x._SY116_CB667159063_.jpg" class="w-50 h-100" alt="">
-          <div class="h-100 w-50">
-            <a href="">Bedtime Originals Twinkle Toes Pink...</a>
-            <p>Stars 6789</p>
-            <p class="text-danger">$123</p>
-            <button class="btn btn-warning w-75 rounded-pill my-1">Add to Cart</button>
-          </div>
-        </div>
-        <div class="d-flex w-100 mb-2" style="height: 300px;">
-          <img src="../Fuji_Quad_Mouse_1x._SY116_CB667159063_.jpg" class="w-50 h-100" alt="">
-          <div class="h-100 w-50">
-            <a href="">Bedtime Originals Twinkle Toes Pink...</a>
-            <p>Stars 6789</p>
-            <p class="text-danger">$123</p>
-            <button class="btn btn-warning w-75 rounded-pill my-1">Add to Cart</button>
-          </div>
-        </div>
-        <div class="d-flex w-100 mb-2" style="height: 300px;">
-          <img src="../Fuji_Quad_Mouse_1x._SY116_CB667159063_.jpg" class="w-50 h-100" alt="">
-          <div class="h-100 w-50">
-            <a href="">Bedtime Originals Twinkle Toes Pink...</a>
-            <p>Stars 6789</p>
-            <p class="text-danger">$123</p>
-            <button class="btn btn-warning w-75 rounded-pill my-1">Add to Cart</button>
-          </div>
-        </div>
-        <div class="d-flex w-100 mb-2" style="height: 300px;">
-          <img src="../Fuji_Quad_Mouse_1x._SY116_CB667159063_.jpg" class="w-50 h-100" alt="">
-          <div class="h-100 w-50">
-            <a href="">Bedtime Originals Twinkle Toes Pink...</a>
-            <p>Stars 6789</p>
-            <p class="text-danger">$123</p>
-            <button class="btn btn-warning w-75 rounded-pill my-1">Add to Cart</button>
-          </div>
-        </div>
-        <div class="d-flex w-100 mb-2" style="height: 300px;">
-          <img src="../Fuji_Quad_Mouse_1x._SY116_CB667159063_.jpg" class="w-50 h-100" alt="">
-          <div class="h-100 w-50">
-            <a href="">Bedtime Originals Twinkle Toes Pink...</a>
-            <p>Stars 6789</p>
-            <p class="text-danger">$123</p>
-            <button class="btn btn-warning w-75 rounded-pill my-1">Add to Cart</button>
-          </div>
-        </div>
-        <div class="d-flex w-100 mb-2" style="height: 300px;">
-          <img src="../Fuji_Quad_Mouse_1x._SY116_CB667159063_.jpg" class="w-50 h-100" alt="">
-          <div class="h-100 w-50">
-            <a href="">Bedtime Originals Twinkle Toes Pink...</a>
-            <p>Stars 6789</p>
-            <p class="text-danger">$123</p>
-            <button class="btn btn-warning w-75 rounded-pill my-1">Add to Cart</button>
-          </div>
+        <div id="displayRelatedGrid">
         </div>
       </div>
     </div>

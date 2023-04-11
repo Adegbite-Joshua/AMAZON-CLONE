@@ -5,9 +5,18 @@
     padding: 1rem;
     grid-template-columns: 5fr 2fr;
 }
+@media (max-width: 768px) {
+    .gridCart{
+        grid-template-columns: 100% 100%;
+    }
+    .smallDeviceButton{
+        width: 100% !important;
+        font-size: 12px;
+    }
+}
 .relatedGrid{
     display: flex;
-    height: 400px;
+    height: auto !important;
     flex-direction: row;
     padding: 1rem;
     position: relative;
@@ -29,4 +38,10 @@
 .buttonGrid2{
     right: 0;
     left: 100;
+}
+.fa-star{
+    color: yellow;
+}
+.checked{
+    color: green;
 }

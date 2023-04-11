@@ -5976,7 +5976,7 @@ textarea.form-control-lg {
 .carousel-indicators {
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: -20%;
   left: 0;
   z-index: 2;
   display: flex;
@@ -5985,6 +5985,15 @@ textarea.form-control-lg {
   margin-right: 15%;
   margin-bottom: 1rem;
   margin-left: 15%;
+  list-style: none;
+}
+.carousel-indicators1 {
+  bottom: -30%;
+  left: 0;
+  /* background-color: red; */
+  margin-right: 15rem;
+  margin-bottom: 1rem;
+  margin-left: 0%;
   list-style: none;
 }
 .carousel-indicators [data-bs-target] {

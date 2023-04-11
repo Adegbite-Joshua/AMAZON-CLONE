@@ -25,7 +25,14 @@ const addProduct =()=>{
         productInformation: productInformation.value,
         photoURL: pictureURL,
         initialPrice: initialPrice.value,
-        currentPrice: currentPrice.value
+        currentPrice: currentPrice.value,
+        productColor: productColor.value,
+        productBrand: productBrand.value,
+        productCompatibleDevices: compatibleDevices.value,
+        productCompatiblePhone: compatiblePhone.value,
+        productModels: productModels.value,
+        productMaterial: productMaterial.value,
+        productRating: initialStarRating.value
     }
     if (productCategory.value=="computers") {
         allAmazonProducts[0].push(productDetails)

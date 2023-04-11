@@ -5,11 +5,413 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 </head>
+<style>
+    *{
+        word-wrap: normal;
+        word-break: normal;
+    }
+    button{
+        width: auto;
+    }
+    .colorBorder{
+        height: 300px;
+        width: 300px;
+        background-color: blue;
+        position: relative;
+        overflow: hidden;
+    }
+    .colorBorder:hover::before{
+        content: '';
+        position: absolute;
+        inset: -60px;
+        /* height: 400px;
+        width: 400px; */
+        background: red;
+        background-image: linear-gradient(transparent, transparent, red);
+        /* animation: rotate 2s linear infinite; */
+    }
+    .colorBorder:hover::after{
+        content: '';
+        position: absolute;
+        inset: -60px;
+        /* height: 400px;
+        width: 400px; */
+        background-image: linear-gradient(transparent, transparent, blue);
+        animation: rotate 2s linear infinite;
+        /* animation-delay: 2s; */
+    }
+    .main{
+        position: absolute;
+        inset: 0;
+        z-index: 55;
+        background-color: yellowgreen;
+    }
+    .main:hover{
+        inset: 10px;
+    }
+    @keyframes rotate {
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+</style>
 <body>
     <input type="file" id="fileInput">
     <img src="" id="divPic" alt="">
 
+    <!-- <div style="height: 30px;" class="w-50 border border-2 d-flex mx-auto">
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
+        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
+        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
+        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
+        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
+        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
+        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
+        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
+        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
+        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
+        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
+        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
+        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
+        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
+        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
+        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
+        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
+        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
+        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+        <button class="btn btn-outline-light text-dark">Today's Deals</button>
+        <button class="btn btn-outline-light text-dark">Customer Service</button>
+        <button class="btn btn-outline-light text-dark">Registry</button>
+        <button class="btn btn-outline-light text-dark">Gift Cards</button>
+        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
+        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
+        <button class="btn btn-outline-light text-dark">All</button>
+          <button class="btn btn-outline-light text-dark">Today's Deals</button>
+          <button class="btn btn-outline-light text-dark">Customer Service</button>
+          <button class="btn btn-outline-light text-dark">Registry</button>
+          <button class="btn btn-outline-light text-dark">Gift Cards</button>
+          <button class="btn btn-outline-light text-dark">All</button>
+          <button class="btn btn-outline-light text-dark">Today's Deals</button>
+          <button class="btn btn-outline-light text-dark">Customer Service</button>
+          <button class="btn btn-outline-light text-dark">Registry</button>
+          <button class="btn btn-outline-light text-dark">Gift Cards</button>
+          <button class="btn btn-outline-light text-dark">All</button>
+          <button class="btn btn-outline-light text-dark">Today's Deals</button>
+          <button class="btn btn-outline-light text-dark">Customer Service</button>
+          <button class="btn btn-outline-light text-dark">Registry</button>
+          <button class="btn btn-outline-light text-dark">Gift Cards</button>
+          <button class="btn btn-outline-light text-dark me-auto">Sell</button>
+          <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
+    </div> -->
+
+    <div class="colorBorder d-block mx-auto">
+        <div class="main">
+            <img src="../61TD5JLGhIL._SX3000_.jpg" style="height: 100%; width: 100%;" alt="">
+        </div>
+    </div>
 
     <script>
         document.getElementById("fileInput").addEventListener("change", e => {
@@ -23,6 +425,7 @@
             })
             reader.readAsDataURL(file)
         })
+        
     </script>
 </body>
 </html>

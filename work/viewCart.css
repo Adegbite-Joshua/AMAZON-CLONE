@@ -1,0 +1,5 @@
+@media (max-width: 780px) {
+    .smallFlex{
+        flex-basis: 100% !important;
+    }
+}

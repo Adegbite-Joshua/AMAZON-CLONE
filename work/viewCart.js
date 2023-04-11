@@ -1,6 +1,10 @@
 let allAmazonProducts = JSON.parse(localStorage.getItem("allAmazonProducts"))
 let productCategoryIndex = Number(localStorage.getItem("productCategoryIndex"))
 let amazonCart = JSON.parse(localStorage.getItem("amazonCart"))
+console.log(allAmazonProducts)
+console.log(productCategoryIndex);
+console.log(amazonCart);
+
 
 const displayCarts =()=>{
   displayCart.innerHTML = ""
@@ -13,8 +17,9 @@ const displayCarts =()=>{
       <h3>${allAmazonProducts[item.categoryIndex][item.productIndex].productInformation}</h3>
       <small>In Stock</small>
       <p>Eligible for FREE Shipping & <a href="">FREE Returns</a></p>
-      <input type="checkbox" name="" id="" class="mt-1"><p class="d-inline ms-2 mt-1">This is a gift <a href="">Learn more</a></p>
-      <p><strong>Style:</strong> Basic</p>
+      <input type="checkbox" name="" id="" class="mt-1 d-none d-md-inline"><p class="d-none d-md-inline ms-2 mt-1">This is a gift <a href="">Learn more</a></p>
+      <p class="d-none d-md-block"><strong>Style:</strong> Basic</p>
+      <p class="d-md-none">#${allAmazonProducts[item.categoryIndex][item.productIndex].currentPrice}</p>
       <select name="" id="productAmount${String(item.categoryIndex) + String(item.productIndex)}" onchange="changeQuantity(${item.categoryIndex}, ${item.productIndex}, ${index})" class="form-control" style="width: 70px; display: inline;">
         <option value="0">0(Delete)</option>
           <option value="1" selected>1</option>
@@ -36,7 +41,7 @@ const displayCarts =()=>{
       <small> Compare with similar Items</small>|
       <small> Share</small>
     </div>
-    <div class="ms-auto">
+    <div class="d-none d-md-block ms-auto">
       $${allAmazonProducts[item.categoryIndex][item.productIndex].currentPrice}
     </div>
   </div>
@@ -44,6 +49,7 @@ const displayCarts =()=>{
     `
 })
 displayDetails()
+displayRelated()
 }
 
 const displayDetails =()=>{
@@ -51,9 +57,10 @@ const displayDetails =()=>{
   let priceSum = 0
   amazonCart.map((item, index)=>{
     allOrderedAmount += Number(item.productAmount)
-    // console.log(allAmazonProducts[item.categoryIndex][item.productIndex].productAmount)
-    // console.log(allAmazonProducts[item.categoryIndex][item.productIndex].productAmount*allAmazonProducts[item.categoryIndex][item.productIndex].currentPrice);
-    priceSum += amazonCart[index].productAmount*allAmazonProducts[item.categoryIndex][item.productIndex].currentPrice 
+    priceSum += item.productAmount*allAmazonProducts[item.categoryIndex][item.productIndex].currentPrice 
+    if (item.productAmount>=1 || item.productAmount<= 9) {
+      document.getElementById(`productAmount${String(item.categoryIndex) + String(item.productIndex)}`)[item.productAmount].selected = true
+    }
   })
   for (let i = 0; i < document.querySelectorAll(".itemNumber").length; i++) {
     if (allOrderedAmount==1) {
@@ -65,6 +72,7 @@ const displayDetails =()=>{
   for (let j = 0; j < document.querySelectorAll(".allProductPrice").length; j++) {
       document.querySelectorAll(".allProductPrice")[j].innerText = priceSum
   }
+    
 }
 
 const changeQuantity =(categoryIndex, productIndex, cartIndex)=>{
@@ -88,6 +96,48 @@ const deleteItem =(index)=>{
     amazonCart.splice(index, 1)
     saveData()
     displayCarts()
+}
+
+const displayRelated =()=>{
+    let number = Math.round((Math.round(Math.random()*4)))
+    console.log(number)
+    if (productCategoryIndex!=number) {
+      displayRelatedGrid.innerHTML = ""
+      allAmazonProducts[number].map((item, index)=>{
+        // amazonCart.map((items)=>{
+          // if (index!=) {
+            displayRelatedGrid.innerHTML +=`
+              <div class="d-flex w-100 mb-2" style="height: 300px;">
+                <img src="${item.photoURL}" class="w-50 h-100" alt="">
+                <div class="h-100 w-50">
+                  <a href="">${item.productInformation}</a>
+                  <p>Stars 6789</p>
+                  <p class="text-danger">$123</p>
+                  <button class="btn btn-warning w-75 rounded-pill my-1" onclick="addToCart(${number}, ${index})">Add to Cart</button>
+                </div>
+              </div>
+          `
+          // }
+        // })
+      })
+    } else{
+      displayRelated()
+    }
+}
+
+const addToCart =(categoryIndexC, productIndexC)=>{
+  let productDetails = {
+      categoryIndex: categoryIndexC,
+      productIndex: productIndexC,
+      productAmount: 1
+  } 
+  if (allAmazonProducts[productCategoryIndex][productIndex]<5) {
+      allAmazonProducts[productCategoryIndex][productIndex] += 0.5
+  }
+  amazonCart.push(productDetails)
+  localStorage.setItem("allAmazonProducts", JSON.stringify(allAmazonProducts))
+  localStorage.setItem("amazonCart", JSON.stringify(amazonCart))
+  window.location.href = "addToCart.html"
 }
 
 const updateAmount =(index)=>{

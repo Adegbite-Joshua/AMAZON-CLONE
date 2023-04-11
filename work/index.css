@@ -13,6 +13,9 @@ body{
     display: flex;
     color: white;
 }
+#navGrid{
+  grid-template-columns: minmax(100px, 300px);
+}
 .tooltip1 {
     position: relative;
     display: inline-block;
@@ -156,15 +159,7 @@ body{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-  /* .innerSide{
-    grid-column: 4/5 ;
-  }
-  .mainSide{
-    grid-column: 1/4;
-  }
-  .mainSide1{
-    grid-column: 5/7;
-  } */
+  
   li{
     list-style-type: none;                                                                                             
     margin-left: 0;
@@ -268,4 +263,23 @@ body{
     row-gap: 5px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+  }
+
+  @media (max-width:890px) {
+      .transparentDiv{
+          display: flex;
+          height: 100px;
+          /* grid-column-gap: 1rem; */
+          /* justify-content: space-evenly; */
+          overflow-x: auto;
+      }
+      .productDiv{
+        display: flex;
+        height: 100%;
+        column-gap: 5px;
+        row-gap: 5px;
+      }
+      .mainPics{
+        width: 100px !important;
+      }
   }

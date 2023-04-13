@@ -1,0 +1,24 @@
+.sellTable tr td{
+    font-size: 10px;
+}
+
+.fa-star{
+    color: yellow;
+}
+.checked{
+    color: green;
+}
+.img2{
+    filter: saturate(40%);
+    filter: sepia(30%);
+}
+.img3{
+    filter: invert(45%);
+    filter: brightness(70%);
+}
+
+@media (max-width: 450px) {
+    .carousel-indicators1{
+        margin-right: 5rem !important;
+    }
+}

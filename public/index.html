@@ -5,128 +5,198 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amazon</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">    <link rel="stylesheet" href="./index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">    <link rel="stylesheet" href="./index.css">
 </head>
-<body>
-    <div id="mainNav" class="position-relative" style="z-index: 444444444;">
-        <a href="" class="h-100 d-inline p-3">
-            <img src="../logo.jpeg" alt="" class="d-inline whiteBorderHover" style="width: 160px; height: 90%;" >
-        </a>
-        <div style="width: 150px;" class="d-inline d-flex flex-row justify-content-center my-3 whiteBorderHover">
-            <div>i</div>
-            <div>
-              <p class="d-inline p-0 m-0">Deliver to <br> Nigeria</p>
-            </div>
-        </div>
-        <div id="yellowBorderHover" class="d-flex my-4 rounded-3 overflow-hidden" style="width: 700px;">
-            <select name="" id="" class="flex10">
-                <option value="" selected> All</option>
-                <option value="">Nigeria</option>
-                <option value="">USA</option>
-                <option value="">Uganda</option>
-                <option value="">Dubai</option>
-            </select>
-            <input class="flex80" aria-label="Text input with segmented dropdown button" onfocus="focusYellowBorder()" placeholder="Search amazon">
-            <button type="button" class="flex10 btn btn-warning">Sea</button>
+<body class="position-relative">
+    <div class="position-fixed top-0 end-0 start-0" style="background-color: #FFFFFF; height: 100vh; z-index: 999999999999999999999999999999999999999999999999999;" id="loadingData">
+      <div class="d-flex justify-content-center align-items-center w-100 h-100">
+        <img style="height: 200px; width: 200px;" src="https://firebasestorage.googleapis.com/v0/b/proade-3e60a.appspot.com/o/R.gif?alt=media&token=b9b99771-96fc-44f3-80e4-3f163c422ce7" alt="">
+      </div>
+    </div>
+    <div id="mainNav" class="position-relative padding navFlex" style="z-index: 444444444;">
+      <a href="" class="h-100 d-inline d-flex align-items-center justify-content-center flex10 width0">
+          <!-- <span class="text-light">|||</span> -->
+          <img src="../logo.jpeg" alt="" class="d-inline whiteBorderHover my-auto" style="width: 160px; height: 80%;" >
+      </a>
+      <div style="width: 150px;" class="d-inline d-flex flex-row align-items-center justify-content-center my-3 whiteBorderHover displayNone">
+          <div><i class="fas fa-location-dot"></i></div>
+          <div>
+            <p class="d-inline p-0 m-0">Deliver to <br> Nigeria</p>
           </div>
-          
-          <div class="dropdown  m-4">
-            <p class="dropbtn whiteBorderHover p-3">EN</p>
-            <div class="dropdown-content">
-                <p class="text-dark">Change language</p>
-                <input type="radio" name="language" class="mx-2" checked> <span class="text-dark">English EN</span>
-                <hr class="border border-dark">
-                <input type="radio" name="language" class="mx-2"><span class="text-dark">español - ES</span> <br class="my-2">
-                <input type="radio" name="language" class="mx-2"><span class="text-dark">العربية - AR</span> <br class="my-2">
-                <input type="radio" name="language" class="mx-2"><span class="text-dark">Deutsch - DE</span> <br class="my-2">
-                <input type="radio" name="language" class="mx-2"><span class="text-dark">עברית - HE</span> <br class="my-2">
-                <input type="radio" name="language" class="mx-2"><span class="text-dark">한국어 - KO</span> <br class="my-2">
-                <input type="radio" name="language" class="mx-2"><span class="text-dark">português - PT</span> <br class="my-2">
-                <input type="radio" name="language" class="mx-2"><span class="text-dark">中文 (简体) - ZH</span> <br class="my-2">
-            </div>
-        </div>
-          <div class="tooltip1 my-4 d-inline">
-            <div class="tooltiptext1 ps-4">
-                <button class="btn btn-warning">Sign in</button>
-            </div>
+      </div>
+      <div id="yellowBorderHover" class="nodisplay my-4 rounded-3 overflow-hidden d-flex flex80 width0 smallHeight" style="width: 700px;">
+          <select name="" id="" class="flex10">
+              <option value="" selected> All</option>
+              <option value="">Nigeria</option>
+              <option value="">USA</option>
+              <option value="">Uganda</option>
+              <option value="">Dubai</option>
+          </select>
+          <input type="search" class="flex80" aria-label="Text input with segmented dropdown button" onfocus="focusYellowBorder()" placeholder="Search amazon">
+          <button type="button" class="flex10 btn btn-warning"><i class="fas fa-search text-light"></i></button>
+      </div>
+        
+        <div class="dropdown  m-4 displayNone">
+          <p class="dropbtn whiteBorderHover p-3">EN</p>
+          <div class="dropdown-content">
+              <p class="text-dark">Change language</p>
+              <input type="radio" name="language" class="mx-2" checked> <span class="text-dark">English EN</span>
+              <hr class="border border-dark">
+              <input type="radio" name="language" class="mx-2"><span class="text-dark">español - ES</span> <br class="my-2">
+              <input type="radio" name="language" class="mx-2"><span class="text-dark">العربية - AR</span> <br class="my-2">
+              <input type="radio" name="language" class="mx-2"><span class="text-dark">Deutsch - DE</span> <br class="my-2">
+              <input type="radio" name="language" class="mx-2"><span class="text-dark">עברית - HE</span> <br class="my-2">
+              <input type="radio" name="language" class="mx-2"><span class="text-dark">한국어 - KO</span> <br class="my-2">
+              <input type="radio" name="language" class="mx-2"><span class="text-dark">português - PT</span> <br class="my-2">
+              <input type="radio" name="language" class="mx-2"><span class="text-dark">中文 (简体) - ZH</span> <br class="my-2">
           </div>
-          <div class="dropdown  m-4">
-            <div class="dropbtn  whiteBorderHover p-2">
-            <small>Hello, sign in</small>
-            <h4 class="smallHeaderTitle">Accounts & Lists</h4> </div>
-            <div class="dropdown-content1">
-                <div class="d-flex justify-content-center flex-column">
-                  <button class="btn btn-warning my-2 mx-auto d-inline-block">Sign in</button>
-                  <p class="text-center text-dark">New customer? <a href="" class="text-warning text-decoration-none">Start here.</a></p>
+      </div>
+        <div class="tooltip1 my-4 d-inline displayNone">
+          <div class="tooltiptext1 ps-4">
+              <button class="btn btn-warning" onclick="window.location.href='signIn.html'">Sign in</button>
+          </div>
+        </div>
+        <div class="dropdown  m-4 displayNone">
+          <div class="dropbtn  whiteBorderHover p-2">
+          <small>Hello, sign in</small>
+          <h4 class="smallHeaderTitle smallSize">Accounts & Lists</h4> </div>
+          <div class="dropdown-content1">
+              <div class="d-flex justify-content-center flex-column">
+                <button class="btn btn-warning my-2 mx-auto d-inline-block" onclick="window.location.href='signIn.html'">Sign in</button>
+                <p class="text-center text-dark">New customer? <a href="./signIn.html" class="text-warning text-decoration-none">Start here.</a></p>
+              </div>
+              <hr class="m-0">
+              <div class="ms-3 mt-1 w-100 dropdownSignin">
+                <div style="" class="border border-0 border-end">
+                  <h4>Your Lists</h4>
+                  <ul>
+                    <li><a href="" style="color: black !important;"> Create a List</a></li>
+                    <li><a href="" style="color: black !important;"> Find a List or Registry</a></li>
+                  </ul>
                 </div>
-                <hr class="m-0">
-                <div class="ms-3 mt-1 w-100 dropdownSignin">
-                  <div style="" class="border border-0 border-end">
-                    <h4>Your Lists</h4>
+                <div style="">
+                    <h3>Your Account</h3>
                     <ul>
-                      <li><a href="" style="color: black !important;"> Create a List</a></li>
-                      <li><a href="" style="color: black !important;"> Find a List or Registry</a></li>
+                      <li><a href="" style="color: black !important;"> Account</a></li>
+                      <li><a href="" style="color: black !important;"> Orders</a></li>
+                      <li><a href="" style="color: black !important;"> Recommendations</a></li>
+                      <li><a href="" style="color: black !important;"> Browsing History</a></li>
+                      <li><a href="" style="color: black !important;"> Watchlist</a></li>
+                      <li><a href="" style="color: black !important;"> Video Purchases & Rentals</a></li>
+                      <li><a href="" style="color: black !important;"> Kindle Unlimited</a></li>
+                      <li><a href="" style="color: black !important;"> Content & Devices</a></li>
+                      <li><a href="" style="color: black !important;"> Subscribe & Save Items</a></li>
+                      <li><a href="" style="color: black !important;"> Memberships & Subscriptions</a></li>
+                      <li><a href="" style="color: black !important;"> Music Library</a></li>
                     </ul>
-                  </div>
-                  <div style="">
-                      <h3>Your Account</h3>
-                      <ul>
-                        <li><a href="" style="color: black !important;"> Account</a></li>
-                        <li><a href="" style="color: black !important;"> Orders</a></li>
-                        <li><a href="" style="color: black !important;"> Recommendations</a></li>
-                        <li><a href="" style="color: black !important;"> Browsing History</a></li>
-                        <li><a href="" style="color: black !important;"> Watchlist</a></li>
-                        <li><a href="" style="color: black !important;"> Video Purchases & Rentals</a></li>
-                        <li><a href="" style="color: black !important;"> Kindle Unlimited</a></li>
-                        <li><a href="" style="color: black !important;"> Content & Devices</a></li>
-                        <li><a href="" style="color: black !important;"> Subscribe & Save Items</a></li>
-                        <li><a href="" style="color: black !important;"> Memberships & Subscriptions</a></li>
-                        <li><a href="" style="color: black !important;"> Music Library</a></li>
-                      </ul>
-                  </div>
                 </div>
+              </div>
+          </div>
+      </div>
+        <div class="my-3 mx-2 p-2 whiteBorderHover displayNone">
+            <small>Returns</small>
+            <h4 class="smallHeaderTitle smallSize">& Orders</h4>
+        </div>
+        <div class="my-3 whiteBorderHover flex10 width0">
+          <img src="../logo.jpeg" style="height: 50px; width: 50px; display: inline;" alt="">
+           <h4 class="d-inline smallHeaderTitle"><i class="fas fa-shop text-light"></i></h4>
+        </div>
+  </div>
+  <div class="w-100 bg-dark">
+    <div id="yellowBorderHover" style="display: none;" class="displayInput rounded-3 overflow-hidden flex80 width0 smallHeight w-100">
+        <select name="" id="" class="flex10">
+            <option value="" selected> All</option>
+            <option value="">Nigeria</option>
+            <option value="">USA</option>
+            <option value="">Uganda</option>
+            <option value="">Dubai</option>
+        </select>
+        <input type="search" class="flex80" aria-label="Text input with segmented dropdown button" onfocus="focusYellowBorder()" placeholder="Search amazon">
+        <button type="button" class="flex10 btn btn-warning"><i class="fas fa-search text-light"></i></button>
+    </div>
+  </div>
+  <div id="sideNav2">
+    <div id="sideNav3">
+    </div>
+  </div>
+  <ul id="allNav" class="bg-dark d-flex">
+    <ul class="d-md-none" id="sideNav">
+      <li name="nav">Kola</li>
+      <li name="nav">Kola kdfn</li>
+      <li name="nav">Kola kdff,nnmrnd</li>
+      <li name="nav">Kola kdff,n</li>
+      <li name="nav">Kola kdff,n</li>
+      <li name="nav">Kola</li>
+      <li name="nav">Kola kdfn</li>
+      <li name="nav">Kola kdff,nnm</li>
+      <li name="nav">Kola kdff,n</li>
+      <li name="nav">Kola kdff,n</li>
+      <li name="nav">Kola</li>
+      <li name="nav">Kola kdfn</li>
+      <li name="nav">Kola kdff,nnmrnd</li>
+    </ul>
+    <ul id="otherNav" class="d-flex justify-content-between">
+      <ul class="d-flex">
+        <li class="d-none d-md-inline-block" name="nav" id="sideTrigger">All</li>
+        <li name="nav">Today's Deals</li>
+        <li name="nav">Customer Service</li>
+        <li name="nav">Registry</li>
+        <li name="nav">Gift Cards</li>
+        <li name="nav">Sell</li>
+      </ul>
+      <ul class="ms-auto">
+        <li class="" name="nav">Shop great deals now</li>
+      </ul>
+    </ul>
+  </ul>
+  <div class="w-100">
+      <div id="carouselExampleDark" class="carousel carousel-dark slide w-100">
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="2000">
+              <img src="../61DUO0NqyyL._SX3000_.jpg" class="d-block w-100" alt="...">
             </div>
-        </div>
-          <div class="my-3 mx-2 p-2 whiteBorderHover">
-              <small>Returns</small>
-              <h4 class="smallHeaderTitle">& Orders</h4>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="../61jovjd+f9L._SX3000_.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="../61Ly9zlsGxL._SX1500_.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="../61TD5JLGhIL._SX3000_.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="../71tIrZqybrL._SX3000_.jpg" class="d-block w-100" alt="...">
+            </div>
           </div>
-          <div class="my-3  whiteBorderHover">
-            <img src="../logo.jpeg" style="height: 50px; width: 50px; display: inline;" alt="">
-             <h4 class="d-inline smallHeaderTitle">Carts</h4>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+          <div id="displayProductDiv" class="w-100 bg-opacity-25 transparentDiv" style="position: absolute; z-index: 9999; top: 50%; bottom: 0; right: 0; left: 0;">
           </div>
-    </div>
-    <div class="bg-dark w-100 d-flex justify-content-between p-1">
-        <div>
-            <button class="btn btn-outline-light text-light">All</button>
-            <button class="btn btn-outline-light text-light">Today's Deals</button>
-            <button class="btn btn-outline-light text-light">Customer Service</button>
-            <button class="btn btn-outline-light text-light">Registry</button>
-            <button class="btn btn-outline-light text-light">Gift Cards</button>
-            <button class="btn btn-outline-light text-light me-auto">Sell</button>
         </div>
-        <div>
-            <button class="btn btn-outline-light text-light me-4">Shop great deals now</button>
-        </div>
-    </div>
+  </div>
     <div class="w-100">
         <div id="carouselExampleDark" class="carousel carousel-dark slide w-100">
             <div class="carousel-inner">
               <div class="carousel-item active" data-bs-interval="2000">
-                <img src="../61DUO0NqyyL._SX3000_.jpg" class="d-block w-100" alt="...">
+                <img src="https://firebasestorage.googleapis.com/v0/b/proade-3e60a.appspot.com/o/61DUO0NqyyL._SX3000_.jpg?alt=media&token=580e3213-ea57-4b0a-9932-93c2601010d3" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item" data-bs-interval="2000">
-                <img src="../61jovjd+f9L._SX3000_.jpg" class="d-block w-100" alt="...">
+                <img src="https://firebasestorage.googleapis.com/v0/b/proade-3e60a.appspot.com/o/61jovjd%2Bf9L._SX3000_.jpg?alt=media&token=b2614684-9089-4d98-a82b-5770f96c18b7" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item" data-bs-interval="2000">
-                <img src="../61Ly9zlsGxL._SX1500_.jpg" class="d-block w-100" alt="...">
+                <img src="https://firebasestorage.googleapis.com/v0/b/proade-3e60a.appspot.com/o/61Ly9zlsGxL._SX1500_.jpg?alt=media&token=f759798f-2377-491c-8dd6-934c37d1e013" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item" data-bs-interval="2000">
-                <img src="../61TD5JLGhIL._SX3000_.jpg" class="d-block w-100" alt="...">
+                <img src="https://firebasestorage.googleapis.com/v0/b/proade-3e60a.appspot.com/o/61TD5JLGhIL._SX3000_.jpg?alt=media&token=ec4900ac-8133-49b7-ba4f-68102e2f8ba4" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item" data-bs-interval="2000">
-                <img src="../71tIrZqybrL._SX3000_.jpg" class="d-block w-100" alt="...">
+                <img src="https://firebasestorage.googleapis.com/v0/b/proade-3e60a.appspot.com/o/71tIrZqybrL._SX3000_.jpg?alt=media&token=cfa4b181-43d2-46ac-9b48-f5c8c8cc0354" class="d-block w-100" alt="...">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
@@ -145,8 +215,8 @@
             <button style="z-index: 99999999999999; font-size: 30px;" class="buttonLeft">&#10094;</button>
             <button style="z-index: 99999999999999; font-size: 30px;" class="buttonRight">&#10095;</button>
             <div id="gridList" class="d-flex scrollSide gridList1 h-100">
-              <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-              <img src="../61jovjd+f9L._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="https://firebasestorage.googleapis.com/v0/b/proade-3e60a.appspot.com/o/71tIrZqybrL._SX3000_.jpg?alt=media&token=cfa4b181-43d2-46ac-9b48-f5c8c8cc0354" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="https://firebasestorage.googleapis.com/v0/b/proade-3e60a.appspot.com/o/61jovjd%2Bf9L._SX3000_.jpg?alt=media&token=b2614684-9089-4d98-a82b-5770f96c18b7" class="h-100 m-2" style="width: 100px;" alt="">
                             
             </div>
             </div>
@@ -155,27 +225,27 @@
             <button class="buttonLeft buttonLeft1" style="font-size: 30px;">&#10094;</button>
             <button class="buttonRight buttonRight1" style="font-size: 30px;">&#10095;</button>
             <div id="gridList1" class="d-flex scrollSide gridList1 h-100">
-              <img src="../71tIrZqybrL._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
-              <img src="../61jovjd+f9L._SX3000_.jpg" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="https://firebasestorage.googleapis.com/v0/b/proade-3e60a.appspot.com/o/71tIrZqybrL._SX3000_.jpg?alt=media&token=cfa4b181-43d2-46ac-9b48-f5c8c8cc0354" class="h-100 m-2" style="width: 100px;" alt="">
+              <img src="https://firebasestorage.googleapis.com/v0/b/proade-3e60a.appspot.com/o/61jovjd%2Bf9L._SX3000_.jpg?alt=media&token=b2614684-9089-4d98-a82b-5770f96c18b7" class="h-100 m-2" style="width: 100px;" alt="">
             </div>
         </div>
 
     <div id="categoryBlock" class="w-100 displayGrid">
         <div class="border border-2" style="height: 400px;">
             <h3>Header</h3>
-            <img src="../61TD5JLGhIL._SX3000_.jpg" class="h-75 d-block mx-auto w-100" alt="">
+            <img src="https://firebasestorage.googleapis.com/v0/b/proade-3e60a.appspot.com/o/61TD5JLGhIL._SX3000_.jpg?alt=media&token=ec4900ac-8133-49b7-ba4f-68102e2f8ba4" class="h-75 d-block mx-auto w-100" alt="">
         </div>
         <div class="border border-2" style="height: 400px;">
             <h3>Header</h3>
-            <img src="../61TD5JLGhIL._SX3000_.jpg" class="h-75 d-block mx-auto w-100" alt="">
+            <img src="https://firebasestorage.googleapis.com/v0/b/proade-3e60a.appspot.com/o/61TD5JLGhIL._SX3000_.jpg?alt=media&token=ec4900ac-8133-49b7-ba4f-68102e2f8ba4" class="h-75 d-block mx-auto w-100" alt="">
         </div>
         <div class="border border-2" style="height: 400px;">
             <h3>Header</h3>
-            <img src="../61TD5JLGhIL._SX3000_.jpg" class="h-75 d-block mx-auto w-100" alt="">
+            <img src="https://firebasestorage.googleapis.com/v0/b/proade-3e60a.appspot.com/o/61TD5JLGhIL._SX3000_.jpg?alt=media&token=ec4900ac-8133-49b7-ba4f-68102e2f8ba4" class="h-75 d-block mx-auto w-100" alt="">
         </div>
         <div class="border border-2" style="height: 400px;">
             <h3>Header</h3>
-            <img src="../61TD5JLGhIL._SX3000_.jpg" class="h-75 d-block mx-auto w-100" alt="">
+            <img src="https://firebasestorage.googleapis.com/v0/b/proade-3e60a.appspot.com/o/61TD5JLGhIL._SX3000_.jpg?alt=media&token=ec4900ac-8133-49b7-ba4f-68102e2f8ba4" class="h-75 d-block mx-auto w-100" alt="">
         </div>
     </div>
 
@@ -188,8 +258,7 @@
     <footer>
         <p class="text-center fw-bold">All rights reserved © PROADE - AMAZON</p>
     </footer>
-    <script src="../bootstrap/js/bootstrap.js"></script>
-    <script src="../bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <script type="module" src="index.js"></script>
     
 </body>

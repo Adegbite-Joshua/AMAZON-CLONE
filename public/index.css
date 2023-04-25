@@ -292,3 +292,128 @@ body{
         width: 100px !important;
       }
   }
+  li[name = "nav"]{
+    color: white;
+    font-size: 20px;
+    /* display: inline-block; */
+    padding: 0;
+    margin: 0;
+    flex: 0 0 auto;
+    border: 1px solid #212529;
+    /* flex-grow: 0;
+    flex-shrink: 0; */
+    margin: 0 2px;
+  }
+  li[name = "nav"]:hover{
+    border: 1px solid white;
+    border-radius: 3px;
+    /* flex-grow: 0;
+    flex-shrink: 0; */
+    flex: 0 0 auto;
+  }
+  ul::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+  }
+  ul[id="allNav"]{
+    display: flex;
+    /* flex-wrap: nowrap; */
+    /* width: 100%; */
+    /* flex-grow: 0; */
+    /* flex-shrink: 0; */
+    list-style-type: none;
+    overflow-x: auto;
+    padding: 3px 4px;
+    /* flex-basis: auto; */
+    /* justify-content: space-between; */
+
+  }
+  /* ul[id="sideNav"]{
+    width: auto
+  } */
+  ul[id="otherNav"]{
+    /* width: auto; */
+    display: flex;
+    flex: 0 0 auto;
+  }
+  /* ul[id="otherNav"] li{
+    display: inline-block;
+  } */
+  #sideNav2{
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    position: absolute;
+    /* right: 50%; */
+    width: 100%;
+    z-index: 99999999999999999999999999999999999999999999;
+    background-color: transparent;
+    /* opacity: ; */
+    height: 100vh;
+    display: none;
+  }
+
+  #sideNav3 li{
+    display: block !important;
+  }
+  #sideNav3{
+    width: 50%;
+    background-color: whitesmoke;
+    height: 100%;
+    
+  }
+  #sideNav3 li{
+    color: black;
+  }
+  @media (max-width: 768px) {
+    ul[id = "sideNav"]{
+      display: flex;
+      background-color: red;
+      /* list-style-type: none; */
+      flex: 0 0 auto;
+    }
+    ul[id = "sideNav"] ul li{
+      flex: 0 0 auto;
+    }
+    ul[id="otherNav"] ul li{
+      flex: 0 0 auto;
+    }
+    
+  }
+  @media (max-width: 1000px) {
+    .displayNone{
+      display: none !important;
+    }
+    .width0{
+      width: 0;
+    }
+    .flex10{
+      flex-basis: 10% !important;
+    }
+    .flex80{
+      flex-basis: 80% !important;
+    }
+    .padding{
+      padding: 1rem;
+      gap: 1rem;
+    }.whiteBorderHover:hover{
+      border: 1px solid #00000000;
+    }
+    .smallHeight{
+      height: 50px !important;
+    }
+  }
+  @media (max-width:500px) {
+    .nodisplay{
+      display: none !important;
+    }
+    .displayInput{
+      display: flex !important;
+    }
+    .navFlex{
+      justify-content: space-between;
+    }
+  }
+  .smallSize{
+    font-size: 12px;
+  }

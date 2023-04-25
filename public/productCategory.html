@@ -8,9 +8,14 @@
     <link rel="stylesheet" href="./index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">    <link rel="stylesheet" href="./productCategory.css">
-    <link rel="stylesheet" href="../fontawesome-free-6.4.0-web/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body class="position-relative">
+  <div class="position-fixed top-0 end-0 start-0" style="background-color: #FFFFFF; height: 100vh; z-index: 999999999999999999999999999999999999999999999999999;" id="loadingData">
+    <div class="d-flex justify-content-center align-items-center w-100 h-100">
+      <img style="height: 200px; width: 200px;" src="https://firebasestorage.googleapis.com/v0/b/proade-3e60a.appspot.com/o/R.gif?alt=media&token=b9b99771-96fc-44f3-80e4-3f163c422ce7" alt="">
+    </div>
+  </div>
     <div id="mainNav">
         <a href="" class="h-100 d-inline p-3">
             <img src="../logo.jpeg" alt="" class="d-inline whiteBorderHover" style="width: 160px; height: 90%;" >
@@ -129,6 +134,6 @@
     <h3 class="text-center mt-2">Featured Categories</h3>
     <div class="w-100 grid_Lists" style="min-height: 500px;">
     </div>
-    <script src="./productCategory.js"></script>
+    <script type="module" src="./productCategory.js"></script>
 </body>
 </html>

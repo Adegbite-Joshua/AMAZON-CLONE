@@ -1,24 +1,25 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
 import { getAuth, signInWithPopup, GoogleAuthProvider, OAuthProvider } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
 import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
-import { getStorage, ref as storageRef, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-storage.js";
+import { getStorage, ref as storageRef, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-storage.js";
 
 
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDz-T57-l5UejPf9OCZka4FlQHbwhx6OEY",
-    authDomain: "proade-39b34.firebaseapp.com",
-    databaseURL: "https://proade-39b34-default-rtdb.firebaseio.com",
-    projectId: "proade-39b34",
-    storageBucket: "proade-39b34.appspot.com",
-    messagingSenderId: "772406186375",
-    appId: "1:772406186375:web:553c2601fc076fc3fd4322"
+    apiKey: "AIzaSyBiG0j2LsAD46QAci4vAYQ2nSRLGAUApNI",
+    authDomain: "proade-3e60a.firebaseapp.com",
+    databaseURL: "https://proade-3e60a-default-rtdb.firebaseio.com",
+    projectId: "proade-3e60a",
+    storageBucket: "proade-3e60a.appspot.com",
+    messagingSenderId: "590803437805",
+    appId: "1:590803437805:web:8633073abee114c61de4e4"
 };
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 const database = getDatabase();
+const storage = getStorage();
 let allAmazonCustomers = [];
 let computers = []
 let boysFashion = []
@@ -33,62 +34,41 @@ let allAmazonProducts = [
     girlsFashion,
     mensFashion
 ]
+let isFetchingData = true
+if (isFetchingData) {
+    loadingData.style.display = "block"
+}
 let lastUserIndex = 0;
 let lastProductIndex = 0;
 
 
-const chatRef = ref(database, `allAmazonCustomers`);
-onValue(chatRef, (snapshot) => {
-    const data = snapshot.val();
-    if (data) {
-    allAmazonCustomers = data
-    }
-});
-const allAmazonProductsRef = ref(database, `allAmazonProducts`);
-onValue(allAmazonProductsRef, (snapshot) => {
-    const data = snapshot.val();
-    if (data) {
-    allAmazonProducts = data
-    lastProductIndex = allAmazonProducts.length        
-    }
+const allAmazonCustomersRef = ref(database, `allAmazonCustomers`);
+onValue(allAmazonCustomersRef, (snapshot) => {
+    allAmazonCustomers = JSON.parse(snapshot.val());
+    // if (data) {
+    // allAmazonCustomers = data
+    // }
+    const allAmazonProductsRef = ref(database, `allAmazonProducts`);
+    onValue(allAmazonProductsRef, (snapshot) => {
+        const data = snapshot.val();
+        if (data) {
+        allAmazonProducts = JSON.parse(data)
+        lastProductIndex = allAmazonProducts.length        
+        }
+        isFetchingData = false
+        if (!isFetchingData) {
+            loadingData.style.display = "none";
+        }
+    });
 });
 
 
 const addProduct =()=>{
-    let productDetails = {
-        productName: productName.value,
-        productDescription: productDescription.value,
-        productAmount: amountAvailable.value,
-        productCategory: productCategory.value,
-        productInformation: productInformation.value,
-        photoURL: pictureURL,
-        initialPrice: initialPrice.value,
-        currentPrice: currentPrice.value,
-        productColor: productColor.value,
-        productBrand: productBrand.value,
-        productCompatibleDevices: compatibleDevices.value,
-        productCompatiblePhone: compatiblePhone.value,
-        productModels: productModels.value,
-        productMaterial: productMaterial.value,
-        productRating: initialStarRating.value
-    }
-    if (productCategory.value=="computers") {
-        allAmazonProducts[0].push(productDetails)
-    } else if (productCategory.value=="boysFashion") {
-        allAmazonProducts[1].push(productDetails)
-    } else if (productCategory.value=="electronics") {
-        allAmazonProducts[2].push(productDetails)
-    } else if (productCategory.value=="girlsFashion") {
-        allAmazonProducts[3].push(productDetails)
-    } else if (productCategory.value=="mensFashion") {
-        allAmazonProducts[4].push(productDetails)
-    }
-    console.log(productDetails)
-    saveData()
-   
-    const videoStorageRef = storageRef(storage, `${newName}`);
-    const uploadTask = uploadBytesResumable(videoStorageRef, productFile.files[0]);
+    let newName = Math.round(Math.random()*1000000)+`${productFile.files[0].name}`
+    const imageStorageRef = storageRef(storage, `${newName}`);
+    const uploadTask = uploadBytesResumable(imageStorageRef, productFile.files[0]);
     uploadTask.on("state-changed", (snapshot) => {
+        console.log(snapshot);
         let progress = Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100)
         displayProgress.innerHTML = `
             <div style="height: 30px; width: 100%;" class="progress" role="progressbar" aria-label="Animated striped" aria-valuenow="${progress}" aria-valuemin="0" aria-valuemax="100">
@@ -96,15 +76,56 @@ const addProduct =()=>{
             </div>
             `
     }, (error) => {
-        
-    }, () => {
+          
+    }, (res) => {
         displayProgress.innerHTML = ""
         alert("Upload successful")
+        console.log(res)
+        getDownloadURL(uploadTask.snapshot.ref)
+        .then((url) => {
+            console.log(url)
+            let productDetails = {
+                productName: productName.value,
+                productDescription: productDescription.value,
+                productAmount: amountAvailable.value,
+                productCategory: productCategory.value,
+                productInformation: productInformation.value,
+                photoName: newName,
+                photoURL: url,
+                initialPrice: initialPrice.value,
+                currentPrice: currentPrice.value,
+                productColor: productColor.value,
+                productBrand: productBrand.value,
+                productCompatibleDevices: compatibleDevices.value,
+                productCompatiblePhone: compatiblePhone.value,
+                productModels: productModels.value,
+                productMaterial: productMaterial.value,
+                productRating: initialStarRating.value
+            }
+            if (productCategory.value=="computers") {
+                allAmazonProducts[0].push(productDetails)
+            } else if (productCategory.value=="boysFashion") {
+                allAmazonProducts[1].push(productDetails)
+            } else if (productCategory.value=="electronics") {
+                allAmazonProducts[2].push(productDetails)
+            } else if (productCategory.value=="girlsFashion") {
+                allAmazonProducts[3].push(productDetails)
+            } else if (productCategory.value=="mensFashion") {
+                allAmazonProducts[4].push(productDetails)
+            }
+            console.log(productDetails)
+            console.log(allAmazonProducts)
+            saveData()
+            console.log(newName);
+            productForm.reset()
+            productPicture.style.backgroundImage = ""
+            productPicture.innerHTML =`<h3 class="text-center animate__animated animate__wobble text-white">Product Image</h3>`
+        })
+        .catch((error) => {
+            console.log(error)
+            // Handle any errors
+        });
     })
-
-    productForm.reset()
-    productPicture.style.backgroundImage = ""
-    productPicture.innerHTML =`<h3 class="text-center animate__animated animate__wobble text-white">Product Image</h3>`
 }
 
 document.getElementById("productFile").addEventListener('change', ()=>{
@@ -118,8 +139,9 @@ document.getElementById("productFile").addEventListener('change', ()=>{
     reader.readAsDataURL(file)
 })
 const saveData = () => {
+    let allAmazonProductsString = JSON.stringify(allAmazonProducts)
     let allAmazonProductsRef = ref(database, `allAmazonProducts`)
-    set(allAmazonProductsRef, allAmazonProducts)
+    set(allAmazonProductsRef, allAmazonProductsString)
 }
 
 

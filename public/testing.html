@@ -51,6 +51,16 @@
     .main:hover{
         inset: 10px;
     }
+    ul{
+        list-style-type: none;
+        width: 100%;
+        /* min-width: 100vw; */
+        overflow-x: scroll;
+        /* overflow-y: scroll; */
+    }
+    li{
+        display: inline-block;
+    }
     @keyframes rotate {
         0%{
             transform: rotate(0deg);
@@ -64,348 +74,348 @@
     <input type="file" id="fileInput">
     <img src="" id="divPic" alt="">
 
-    <!-- <div style="height: 30px;" class="w-50 border border-2 d-flex mx-auto">
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
-        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
-        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
-        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
-        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
-        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
-        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
-        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
-        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
-        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
-        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
-        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
-        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
-        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
-        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
-        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
-        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
-        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
-        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-        <button class="btn btn-outline-light text-dark">Today's Deals</button>
-        <button class="btn btn-outline-light text-dark">Customer Service</button>
-        <button class="btn btn-outline-light text-dark">Registry</button>
-        <button class="btn btn-outline-light text-dark">Gift Cards</button>
-        <button class="btn btn-outline-light text-dark me-auto">Sell</button>
-        <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
-        <button class="btn btn-outline-light text-dark">All</button>
-          <button class="btn btn-outline-light text-dark">Today's Deals</button>
-          <button class="btn btn-outline-light text-dark">Customer Service</button>
-          <button class="btn btn-outline-light text-dark">Registry</button>
-          <button class="btn btn-outline-light text-dark">Gift Cards</button>
-          <button class="btn btn-outline-light text-dark">All</button>
-          <button class="btn btn-outline-light text-dark">Today's Deals</button>
-          <button class="btn btn-outline-light text-dark">Customer Service</button>
-          <button class="btn btn-outline-light text-dark">Registry</button>
-          <button class="btn btn-outline-light text-dark">Gift Cards</button>
-          <button class="btn btn-outline-light text-dark">All</button>
-          <button class="btn btn-outline-light text-dark">Today's Deals</button>
-          <button class="btn btn-outline-light text-dark">Customer Service</button>
-          <button class="btn btn-outline-light text-dark">Registry</button>
-          <button class="btn btn-outline-light text-dark">Gift Cards</button>
-          <button class="btn btn-outline-light text-dark me-auto">Sell</button>
-          <button class="btn btn-outline-light text-dark me-4">Shop great deals now</button>
-    </div> -->
+    <ul style="height: 30px;" class="w-50 border border-2 mx-auto">
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>Sell</li>
+        <li>Shop great deals now</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>Sell</li>
+        <li>Shop great deals now</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>Sell</li>
+        <li>Shop great deals now</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>Sell</li>
+        <li>Shop great deals now</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>Sell</li>
+        <li>Shop great deals now</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>Sell</li>
+        <li>Shop great deals now</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>Sell</li>
+        <li>Shop great deals now</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>Sell</li>
+        <li>Shop great deals now</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>Sell</li>
+        <li>Shop great deals now</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>Sell</li>
+        <li>Shop great deals now</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>Sell</li>
+        <li>Shop great deals now</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>Sell</li>
+        <li>Shop great deals now</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>Sell</li>
+        <li>Shop great deals now</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>Sell</li>
+        <li>Shop great deals now</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>Sell</li>
+        <li>Shop great deals now</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>Sell</li>
+        <li>Shop great deals now</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>Sell</li>
+        <li>Shop great deals now</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>Sell</li>
+        <li>Shop great deals now</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>All</li>
+        <li>Today's Deals</li>
+        <li>Customer Service</li>
+        <li>Registry</li>
+        <li>Gift Cards</li>
+        <li>Sell</li>
+        <li>Shop great deals now</li>
+        <li>All</li>
+          <li>Today's Deals</li>
+          <li>Customer Service</li>
+          <li>Registry</li>
+          <li>Gift Cards</li>
+          <li>All</li>
+          <li>Today's Deals</li>
+          <li>Customer Service</li>
+          <li>Registry</li>
+          <li>Gift Cards</li>
+          <li>All</li>
+          <li>Today's Deals</li>
+          <li>Customer Service</li>
+          <li>Registry</li>
+          <li>Gift Cards</li>
+          <li>Sell</li>
+          <li>Shop great deals now</li>
+    </ul>
 
     <div class="colorBorder d-block mx-auto">
         <div class="main">
@@ -416,6 +426,7 @@
     <script>
         document.getElementById("fileInput").addEventListener("change", e => {
             const file = fileInput.files[0]
+            console.log(file.name)
             const reader = new FileReader()
             console.log(reader)
 

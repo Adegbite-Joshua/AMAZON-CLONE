@@ -1,16 +1,16 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
-import { getAuth, signInWithPopup, GoogleAuthProvider, OAuthProvider } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
+import { getAuth, onAuthStateChanged, signInWithPopup, GoogleAuthProvider, OAuthProvider } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
 import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDz-T57-l5UejPf9OCZka4FlQHbwhx6OEY",
-    authDomain: "proade-39b34.firebaseapp.com",
-    databaseURL: "https://proade-39b34-default-rtdb.firebaseio.com",
-    projectId: "proade-39b34",
-    storageBucket: "proade-39b34.appspot.com",
-    messagingSenderId: "772406186375",
-    appId: "1:772406186375:web:553c2601fc076fc3fd4322"
-};
+    apiKey: "AIzaSyBiG0j2LsAD46QAci4vAYQ2nSRLGAUApNI",
+    authDomain: "proade-3e60a.firebaseapp.com",
+    databaseURL: "https://proade-3e60a-default-rtdb.firebaseio.com",
+    projectId: "proade-3e60a",
+    storageBucket: "proade-3e60a.appspot.com",
+    messagingSenderId: "590803437805",
+    appId: "1:590803437805:web:8633073abee114c61de4e4"
+  };
 
 const app = initializeApp(firebaseConfig);
 const googleProvider = new GoogleAuthProvider();
@@ -18,7 +18,11 @@ const auth = getAuth();
 const database = getDatabase();
 let allAmazonCustomers = [];
 let lastUserIndex = 0;
-
+let customerDetails = null;
+let isFetchingData = true
+if (isFetchingData) {
+    loadingData.style.display = "block"
+}
 
 function viewSignUp() {
     signInDiv.style.display = "none"
@@ -28,13 +32,25 @@ function viewSignIn() {
     signInDiv.style.display = "block"
     signUpDiv.style.display = "none"
 }
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        console.log(user);
+        window.location.href = "chooseAddress.html"         
+    }
+});
 
-const chatRef = ref(database, `allAmazonCustomers`);
-onValue(chatRef, (snapshot) => {
-    const data = snapshot.val();
+
+const allAmazonCutomersRef = ref(database, `allAmazonCustomers`);
+onValue(allAmazonCutomersRef, (snapshot) => {
+    const data = JSON.parse(snapshot.val());
     if (data) {
-    allAmazonCustomers = data
+    // console.log(data);
+    allAmazonCustomers = data;
     lastUserIndex = allAmazonCustomers.length        
+    }
+    isFetchingData = false
+    if (!isFetchingData) {
+        loadingData.style.display = "none"
     }
 });
 document.getElementById("signInGoogle").addEventListener("click", () => {
@@ -44,44 +60,72 @@ document.getElementById("signInGoogle").addEventListener("click", () => {
             const token = credential.accessToken;
             const userInfo = result.user;
             let foundUser = false
+            console.log(userInfo);
             allAmazonCustomers.map((user) => {
                 if (userInfo.uid == user.userId) {
-                    alert("found user")
                     foundUser = true
                 }
             })
-            if (foundUser) {
-                alert("Welcome back!!!")
-                window.location.href = "index.html"
+            if (foundUser) {            
+                Swal.fire({
+                    icon: "success",
+                    title: "Account Exists",
+                    text: "Found User. Welcome Back!",
+                    button: {
+                        text: "Continue",
+                        className: "btn btn-succes d-block mx-auto",
+                    },
+                    footer: '',
+                  }).then((result) => {
+                    // window.location.href = "chooseAddress.html"
+                  });
             } else {
-                let customerDetails = {
-                    firstName: firstName.value,
-                    lastName: lastName.value,
-                    contactInfo: info,
-                    password: password.value,
+                customerDetails = {
+                    name: userInfo.displayName,
+                    phoneNumber: `${userInfo.phoneNumber}`,
+                    email: userInfo.email,
+                    userId: userInfo.uid,
                     index: lastUserIndex,
                     address: false,
                     card: false,
-                    todo: ""
+                    todo: "",
+                    cart: []
                 }
                 allAmazonCustomers.push(customerDetails)
                 saveData()
-                alert("you have successfully created an account")
-                window.location.href = "index.html"
+                Swal.fire({
+                    icon: "success",
+                    title: "",
+                    text: "Signed up successfully!",
+                    button: {
+                        text: "Continue",
+                        className: "btn btn-succes d-block mx-auto",
+                    },
+                    footer: '',
+                  }).then((result) => {
+                    // window.location.href = "chooseAddress.html"
+                  });
             }
-        }).catch((error) => {
-            // const errorCode = error.code;
-            // const errorMessage = error.message;
-            // const emailError = error.customData.email;
-            // const credential = GoogleAuthProvider.credentialFromError(error);
+        })
+        .catch((error) => {
             console.log(error);
-
+            Swal.fire({
+                icon: "error",
+                title: "Error",
+                text: "There is error signing you in, please try again later",
+                button: {
+                    text: "Okay",
+                    className: "btn btn-succes d-block mx-auto",
+                },
+                footer: '',
+              })
         });
 })
 
 const saveData = () => {
-    let allAmazonCustomersRef = ref(database, `allAmazonCustomers`)
-    set(allAmazonCustomersRef, allAmazonCustomers)
+    let allAmazonCustomersString = JSON.stringify(allAmazonCustomers)
+    let allAmazonCustomersRef = ref(database, `allAmazonCustomers`);
+    set(allAmazonCustomersRef, allAmazonCustomersString)
 }
 
 

@@ -10,12 +10,18 @@
   integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link rel="stylesheet" href="./index.css">
   <link rel="stylesheet" href="./viewCart.css">
+  <link rel="shortcut icon" href="https://firebasestorage.googleapis.com/v0/b/proade-3e60a.appspot.com/o/logo.jpeg?alt=media&token=967409c7-81ea-45c1-943b-063dfc27fe5b" type="image/x-icon">
 </head>
 
 <body class="position-relative">
+  <div class="position-fixed top-0 end-0 start-0" style="background-color: #FFFFFF; height: 100vh; z-index: 999999999999999999999999999999999999999999999999999;" id="loadingData">
+    <div class="d-flex justify-content-center align-items-center w-100 h-100">
+      <img style="height: 200px; width: 200px;" src="https://firebasestorage.googleapis.com/v0/b/proade-3e60a.appspot.com/o/R.gif?alt=media&token=b9b99771-96fc-44f3-80e4-3f163c422ce7" alt="">
+    </div>
+  </div>
   <div id="mainNav">
     <a href="" class="h-100 d-inline p-3">
-      <img src="../logo.jpeg" alt="" class="d-inline whiteBorderHover" style="width: 160px; height: 90%;">
+      <img src="https://firebasestorage.googleapis.com/v0/b/proade-3e60a.appspot.com/o/logo.jpeg?alt=media&token=967409c7-81ea-45c1-943b-063dfc27fe5b" alt="" class="d-inline whiteBorderHover" style="width: 160px; height: 90%;">
     </a>
     <div style="width: 150px;" class="d-inline d-flex flex-row justify-content-center my-3 whiteBorderHover">
       <div><i class="bi bi-search"></i></div>
@@ -118,7 +124,7 @@
     </div>
   </div>
   <div class="d-md-none px-3">
-    <h4 class="d-inline">Subtotal <sup>#</sup><h2 class="d-inline allProductPrice"></h2><sup>00</sup></h4>
+    <h4 class="d-inline">Subtotal <sup># </sup><h2 class="d-inline allProductPrice"></h2><sup>00</sup></h4>
     <button class="w-100 btn btn-warning" onclick="window.location.href='signIn.html'">Proceed to checkout (<span class="itemNumber"></span>)</button>
     <input type="checkbox" name="" id="" class="mt-1">
     <p class="d-inline ms-2 mt-1">This order contains a gift</p>
@@ -131,13 +137,13 @@
       <div id="displayCart" class="w-100">
 
       </div>
-      <p class="text-end">Subtotal (<span class="itemNumber"></span> ): <span class="fw-bold allProductPrice">$30.42</span></p>
+      <p class="text-end">Subtotal (<span class="itemNumber"></span> ): # <span class="fw-bold allProductPrice">$30.42</span></p>
     </div>
     <div style="flex-basis: 30%;" class="p-2 d-none d-md-inline-block">
       <div class="w-100 p-2" style="height: 300px;">
         <p style="font-size: 13px;">✅<span class="text-success">Your order qualifies for FREE Shipping</span>. Choose
           this option at checkout. <a href="">See details</a></p>
-        <p class="pt-5">Subtotal (<span class="itemNumber"></span> ):<span class="fw-bold allProductPrice">$30.42</span></p>
+        <p class="pt-5">Subtotal (<span class="itemNumber"></span> ): #<span class="fw-bold allProductPrice">$30.42</span></p>
         <input type="checkbox" name="" id="" class="mt-1">
         <p class="d-inline ms-2 mt-1">This order contains a gift</p>
         <button class="btn btn-warning w-75 rounded-pill my-1" onclick="window.location.href = 'signIn.html'">Proceed to checkout</button>

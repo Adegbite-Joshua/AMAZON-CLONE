@@ -3,3 +3,18 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
+.zooming{
+    animation-name: zoom;
+    animation-duration: 2s;
+    animation-delay: 3s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+}
+@keyframes zoom {
+    0%{
+        transform: scale(.8);
+    }
+    100%{
+        transform: scale(1.3);
+    }
+}

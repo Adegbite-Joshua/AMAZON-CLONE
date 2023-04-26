@@ -139,10 +139,15 @@ const focusYellowBorder =()=>{
     yellowBorderHover.classList.add("yellowBorderHover")
 }
 
+const closePop =()=>{
+    sideNav2.style.display = "none"
+}
 
 window.focusYellowBorder = focusYellowBorder
 window.viewCategory = viewCategory
 window.viewProduct = viewProduct
+window.closePop = closePop
+
 
 
 
@@ -158,3 +163,5 @@ sideTrigger.addEventListener("click", ()=>{
       sideNav2.style.display = "none"
     }
   }
+
+  

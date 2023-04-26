@@ -369,7 +369,7 @@ body{
   @media (max-width: 768px) {
     ul[id = "sideNav"]{
       display: flex;
-      background-color: red;
+      /* background-color: red; */
       /* list-style-type: none; */
       flex: 0 0 auto;
     }
@@ -429,4 +429,13 @@ body{
     background-color: rgb(8, 12, 12);
     border-radius: 10px;
     color: white;
+  }
+
+  .noBorder{
+    border: 0;
+    outline: 0;
+  }
+  .noBorder:hover{
+    border: 0;
+    outline: 0;
   }

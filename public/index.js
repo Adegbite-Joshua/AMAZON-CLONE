@@ -136,17 +136,17 @@ const viewCategory =(productCategoryIndex)=>{
     window.location.href = "productCategory.html"
 }
 const focusYellowBorder =()=>{
-    yellowBorderHover.classList.add("yellowBorderHover")
+    document.querySelectorAll('yellowBorderHover').classList.add("yellowBorderHover")
 }
 
 const closePop =()=>{
     sideNav2.style.display = "none"
 }
 
+window.closePop = closePop
 window.focusYellowBorder = focusYellowBorder
 window.viewCategory = viewCategory
 window.viewProduct = viewProduct
-window.closePop = closePop
 
 
 

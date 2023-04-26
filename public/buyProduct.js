@@ -83,10 +83,11 @@ onValue(allAmazonCustomersRef, (snapshot) => {
 let productCategoryIndex = Number(localStorage.getItem("productCategoryIndex"))
 let productIndex = Number(localStorage.getItem("productIndex"))
 let user = null
+let product = null
 
 const displayAllProducts =()=>{
     user = allAmazonCustomers[currentAmazonUser]
-    let product = allAmazonProducts[productCategoryIndex][productIndex]
+    product = allAmazonProducts[productCategoryIndex][productIndex]
     productImage.src = product.photoURL
     productName.innerText = product.productName
     productDescription.innerText = product.productInformation
@@ -140,8 +141,9 @@ const addToCart =()=>{
         productIndex: productIndex,
         productAmount: productAmounts.value
     } 
-    if (allAmazonProducts[productCategoryIndex][productIndex].productRating <5) {
-        allAmazonProducts[productCategoryIndex][productIndex].productRating += Number(0.5)
+    if (allAmazonProducts[productCategoryIndex][productIndex].productRating < 5) {
+        let newStarRating = Number(allAmazonProducts[productCategoryIndex][productIndex].productRating) + Number(0.5)
+        allAmazonProducts[productCategoryIndex][productIndex].productRating = newStarRating
         saveData()
     }
     amazonCart.push(productDetails)
@@ -219,6 +221,30 @@ const saveData2 = () => {
 }
 
 
+
+const focusYellowBorder =()=>{
+    document.querySelectorAll('yellowBorderHover').classList.add("yellowBorderHover")
+}
+
+const closePop =()=>{
+    sideNav2.style.display = "none"
+}
+
+window.closePop = closePop
+window.focusYellowBorder = focusYellowBorder
 window.addToCart = addToCart
 window.buyNow = buyNow
 window.payWithPaystack = payWithPaystack
+
+sideTrigger.addEventListener("click", ()=>{
+    sideNav2.className = "sideNav"
+    sideNav2.style.display = "block"
+    document.querySelector("#sideNav3").innerHTML = sideNav.innerHTML
+  })
+
+window.onclick = (e)=>{
+// sideNav3.innerHTML = ""
+if (e.target.id=="sideNav2") {
+    sideNav2.style.display = "none"
+}
+}

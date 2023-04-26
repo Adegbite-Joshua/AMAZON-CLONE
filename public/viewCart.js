@@ -262,8 +262,32 @@ const saveData2 = () => {
 
 
 
+
+const focusYellowBorder =()=>{
+  document.querySelectorAll('yellowBorderHover').classList.add("yellowBorderHover")
+}
+
+const closePop =()=>{
+  sideNav2.style.display = "none"
+}
+
+window.closePop = closePop
+window.focusYellowBorder = focusYellowBorder
 window.deleteItem = deleteItem
 window.changeQuantity = changeQuantity
 window.addToCart = addToCart
 window.updateAmount = updateAmount
 // window.onload = displayCarts()
+
+sideTrigger.addEventListener("click", ()=>{
+  sideNav2.className = "sideNav"
+  sideNav2.style.display = "block"
+  document.querySelector("#sideNav3").innerHTML = sideNav.innerHTML
+})
+
+window.onclick = (e)=>{
+  // sideNav3.innerHTML = ""
+  if (e.target.id=="sideNav2") {
+    sideNav2.style.display = "none"
+  }
+}

@@ -129,8 +129,9 @@ const addToCart =(categoryIndexC, productIndexC)=>{
         productIndex: productIndexC,
         productAmount: 1
     } 
-    if (allAmazonProducts[productCategoryIndex][productIndex].productRating <5) {
-        allAmazonProducts[productCategoryIndex][productIndex].productRating += Number(0.5)
+    if (allAmazonProducts[productCategoryIndex][productIndex].productRating < 5) {
+        let newStarRating = Number(allAmazonProducts[productCategoryIndex][productIndex].productRating) + Number(0.5)
+        allAmazonProducts[productCategoryIndex][productIndex].productRating = newStarRating
         saveData()
     }
     amazonCart.push(productDetails)
@@ -163,4 +164,27 @@ const saveData2 = () => {
     set(allAmazonCustomersRef, allAmazonCustomersString)
 }
 
+const focusYellowBorder =()=>{
+    document.querySelectorAll('yellowBorderHover').classList.add("yellowBorderHover")
+}
+
+const closePop =()=>{
+    sideNav2.style.display = "none"
+}
+
+window.closePop = closePop
+window.focusYellowBorder = focusYellowBorder
 window.addToCart = addToCart
+
+sideTrigger.addEventListener("click", ()=>{
+    sideNav2.className = "sideNav"
+    sideNav2.style.display = "block"
+    document.querySelector("#sideNav3").innerHTML = sideNav.innerHTML
+  })
+
+window.onclick = (e)=>{
+// sideNav3.innerHTML = ""
+if (e.target.id=="sideNav2") {
+    sideNav2.style.display = "none"
+}
+}

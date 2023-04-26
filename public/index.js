@@ -68,9 +68,11 @@ const displayAllProducts =()=>{
             displayProductDiv.innerHTML += `
             <div class="border border-2 productDiv" onclick="viewCategory(${index})" id="productDiv${category[0].productName}"></div>
         `
+        console.log(`productDiv${category[0].productName}`)
         let filteredCategory = category.filter((items, index)=>index<=3)
         filteredCategory.map((item, itemIndex)=>{
-                document.getElementById("productDiv"+ category[0].productName).innerHTML += `
+
+                document.getElementById(`productDiv${category[0].productName}`).innerHTML += `
                 <img src="${item.photoURL}" class="w-100 h-100 mainPics" />
             `
         })

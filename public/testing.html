@@ -71,10 +71,11 @@
     }
 </style>
 <body>
-    <input type="file" id="fileInput">
-    <img src="" id="divPic" alt="">
+    <div style="height: 200px; width: 200px; background-image: url(../logo.jpeg); background-position: 100% 100%; background-repeat: no-repeat; background-size: 100% 100%;"></div>
+    <!-- <input type="file" id="fileInput">
+    <img src="" id="divPic" alt=""> -->
 
-    <ul style="height: 30px;" class="w-50 border border-2 mx-auto">
+    <!-- <ul style="height: 30px;" class="w-50 border border-2 mx-auto">
         <li>All</li>
         <li>Today's Deals</li>
         <li>Customer Service</li>
@@ -415,27 +416,27 @@
           <li>Gift Cards</li>
           <li>Sell</li>
           <li>Shop great deals now</li>
-    </ul>
+    </ul> -->
 
-    <div class="colorBorder d-block mx-auto">
+    <!-- <div class="colorBorder d-block mx-auto">
         <div class="main">
             <img src="../61TD5JLGhIL._SX3000_.jpg" style="height: 100%; width: 100%;" alt="">
         </div>
-    </div>
+    </div> -->
 
     <script>
-        document.getElementById("fileInput").addEventListener("change", e => {
-            const file = fileInput.files[0]
-            console.log(file.name)
-            const reader = new FileReader()
-            console.log(reader)
+        // document.getElementById("fileInput").addEventListener("change", e => {
+        //     const file = fileInput.files[0]
+        //     console.log(file.name)
+        //     const reader = new FileReader()
+        //     console.log(reader)
 
-            reader.addEventListener("load", ()=>{
-                console.log(reader.result)
-                divPic.src = `${reader.result}`
-            })
-            reader.readAsDataURL(file)
-        })
+        //     reader.addEventListener("load", ()=>{
+        //         console.log(reader.result)
+        //         divPic.src = `${reader.result}`
+        //     })
+        //     reader.readAsDataURL(file)
+        // })
         
     </script>
 </body>

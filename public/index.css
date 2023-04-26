@@ -375,6 +375,7 @@ body{
     }
     ul[id = "sideNav"] ul li{
       flex: 0 0 auto;
+      margin: 6px;
     }
     ul[id="otherNav"] ul li{
       flex: 0 0 auto;
